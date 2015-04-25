@@ -1,0 +1,24 @@
+/*
+    Dibuat Oleh : 
+    Nama    : Basri Basren
+    Nim     : 201410370311030 
+*/
+package PreSistem;
+
+public class AllTest {
+    public static LogIn Login = new LogIn();
+    public static LingkunganTest Lingkungan =new LingkunganTest();
+    public static KebersihanTest Kebersihan = new KebersihanTest();
+    public static KenyamananTest Kenyamanan = new KenyamananTest();
+    public static KeamananTest Keamanan = new KeamananTest();
+    
+    
+    public static void main(String[] args){
+       Login.Logintest();
+       Lingkungan.Lingkungan();
+       Kebersihan.Kebersihantest();
+       Kenyamanan.Kenyamanantest();
+       Keamanan.Keamanantest();
+        
+    }
+}
