@@ -7,6 +7,8 @@ package PreSistem;
 
 public class AllTest {
     public static LogIn Login = new LogIn();
+    public static SaranaTest Sarana1 = new SaranaTest();
+    public static SaranaTest2 Sarana2 = new SaranaTest2();
     public static LingkunganTest Lingkungan =new LingkunganTest();
     public static KebersihanTest Kebersihan = new KebersihanTest();
     public static KenyamananTest Kenyamanan = new KenyamananTest();
@@ -15,6 +17,8 @@ public class AllTest {
     
     public static void main(String[] args){
        Login.Logintest();
+       Sarana1.saranatest();
+       Sarana2.saranatest2();
        Lingkungan.Lingkungan();
        Kebersihan.Kebersihantest();
        Kenyamanan.Kenyamanantest();
