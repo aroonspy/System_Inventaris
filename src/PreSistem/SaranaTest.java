@@ -51,7 +51,7 @@ public class SaranaTest {
                         if(Ksteker >= 4){
                             System.out.println(" Sesuai");
                         }else{
-                            System.out.println();
+                            System.out.println("");
                         }
 		}
                 if(PstekerD >= 0){
