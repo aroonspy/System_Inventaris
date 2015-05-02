@@ -5,10 +5,8 @@
 */
 package PreSistem;
 
-import java.util.Scanner;
 
-public class KenyamananTest {
-    Scanner input = new Scanner (System.in);
+public class KenyamananTest extends IndukClass{
     KenyamananRuangan Kenyamanan = new KenyamananRuangan();
     public void inputKenyamanan(){
         System.out.println("1. Tidak Bising");
@@ -35,30 +33,35 @@ public class KenyamananTest {
     public void AnalisisKenyamanan(){
         if(Kenyamanan.getKebisingan()== 1){
             System.out.println("Kebisingan Di ruangan Tidak Bising Sesuai");
+            Sesuai++;
         }else if(Kenyamanan.getKebisingan()== 2){
             System.out.println("Kebisingan Di ruangan Bising");
         }
         
         if(Kenyamanan.getBau()== 1){
             System.out.println("Bau Di ruangan Tidak Bau Sesuai");
+            Sesuai++;
         }else if(Kenyamanan.getBau()== 2){
             System.out.println("Bau Di ruangan Bau");
         }
         
         if(Kenyamanan.getKebocoran()== 1){
             System.out.println("Kebocoran Di ruangan Tidak Bocor Sesuai");
+            Sesuai++;
         }else if(Kenyamanan.getKebocoran()== 2){
             System.out.println("Kebocoran Di ruangan Bocor");
         }
         
         if(Kenyamanan.getKerusakan()== 1){
             System.out.println("Kerusakan Di ruangan Tidak Rusak Sesuai");
+            Sesuai++;
         }else if(Kenyamanan.getKerusakan()== 2){
             System.out.println("Kerusakan Di ruangan Rusak");
         }
         
         if(Kenyamanan.getKeausan()== 1){
             System.out.println("Keausan Di ruangan Tidak aus Sesuai");
+            Sesuai++;
         }else if(Kenyamanan.getKeausan()== 2){
             System.out.println("Keausan Di ruangan aus");
         }
@@ -66,6 +69,7 @@ public class KenyamananTest {
         if(Kenyamanan.getKebisingan() == 1 && Kenyamanan.getBau() == 1 &&  Kenyamanan.getKebocoran() == 1
                 && Kenyamanan.getKerusakan() == 1 && Kenyamanan.getKeausan() == 1){
             System.out.println("Semua kondisi ruang kelas Sesuai");
+            Sesuai++;
         }
     }
      
