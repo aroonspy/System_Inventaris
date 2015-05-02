@@ -15,18 +15,20 @@ public class AllTest {
     public static KeamananTest Keamanan = new KeamananTest();
     public static IdentitasRuangkelastest Identitas = new IdentitasRuangkelastest();
     public static KondisiRuangtest Kondisi = new KondisiRuangtest();
+    public static IndukClass Induk = new IndukClass();
     
     
     public static void main(String[] args){
-       Login.Logintest();
-       Identitas.IDKelas();
-       Kondisi.kondisitest();
-       Sarana1.saranatest();
-       Sarana2.saranatest2();
+       //Login.Logintest();
+       //Identitas.IDKelas();
+       //Kondisi.kondisitest();
+       //Sarana1.saranatest();
+       //Sarana2.saranatest2();
        Lingkungan.Lingkungan();
        Kebersihan.Kebersihantest();
        Kenyamanan.Kenyamanantest();
        Keamanan.Keamanantest();
+       Induk.rata_rata();
       
     }
 }

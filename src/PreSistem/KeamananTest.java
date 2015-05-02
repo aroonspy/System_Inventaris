@@ -6,10 +6,7 @@
 
 package PreSistem;
 
-import java.util.Scanner;
-
-public class KeamananTest {
-    Scanner input = new Scanner(System.in);
+public class KeamananTest extends IndukClass{
     KeamananRuangKelas KeamananRuang = new KeamananRuangKelas();
     public void inputKeamanan(){
         System.out.println("1. Kokoh");
@@ -30,16 +27,19 @@ public class KeamananTest {
     public void AnalisisKeamanan(){
         if(KeamananRuang.getkekokohan() == 1){
             System.out.println("Nilai Kekokohan = Kokoh Sesuai");
+            Sesuai++;
         }else if(KeamananRuang.getkekokohan() == 2){
             System.out.println("Nilai Kekokohan = Tidak Kokoh");
         }
         if(KeamananRuang.getkunci()== 1){
             System.out.println("Nilai Kunci Pintu dan Jendela = Ada Sesuai");
+            Sesuai++;
         }else if(KeamananRuang.getkunci() == 2){
             System.out.println("Nilai Kunci Pintu dan Jendela = Tidak Ada");
         }
         if(KeamananRuang.getbahaya()== 1){
             System.out.println("Nilai Kemanan = Aman Sesuai");
+            Sesuai++;
         }else if(KeamananRuang.getbahaya()== 2){
             System.out.println("Nilai Kemanan = Tidak Aman");
         }
@@ -56,7 +56,7 @@ public class KeamananTest {
     public void KeamananPilihan(){
         String edit;
        
-        System.out.print("Apakah Anda Inngin Mengedit data (y/n) = ");
+        System.out.print("Apakah Anda Ingin Mengedit data (y/n) = ");
         edit = input.next();
         switch (edit) {
             case "y":
@@ -68,6 +68,7 @@ public class KeamananTest {
                 break;
             default:
                 System.out.println("Anda Salah Memasukkan Inputan tekan y untuk Yes dan n untuk No");
+                KeamananPilihan();
                 break;
         }
             

@@ -5,10 +5,8 @@
 */
 package PreSistem;
 
-import java.util.Scanner;
 
-public class KebersihanTest {
-    Scanner input = new Scanner(System.in);
+public class KebersihanTest extends IndukClass{
     KebersihanRuangKelas KebersihanKelas = new KebersihanRuangKelas();
     public void inputKebersihan(){
         System.out.println("1. Lancar");
@@ -16,37 +14,41 @@ public class KebersihanTest {
         System.out.print("Masukkan Kondisi Sirkulasi Udara = ");
         KebersihanKelas.setSirkulasiUdara(input.nextInt());
 
-        System.out.print("Masukkan Nilai Pencahayaan = ");
+        System.out.print("Masukkan Nilai Pencahayaan ( 250 - 350 )= ");
         KebersihanKelas.setnilaiPencahayaan(input.nextInt());
 
-        System.out.print("Masukkan Nilai Kelembapan = ");
+        System.out.print("Masukkan Nilai Kelembapan ( 70 - 80 ) = ");
         KebersihanKelas.setKelembapan(input.nextInt());
 
-        System.out.print("Masukkan Nilai Suhu = ");
+        System.out.print("Masukkan Nilai Suhu ( 25 - 35 )= ");
         KebersihanKelas.setsuhu(input.nextInt());
     }
     
     public void AnalisisKebersihan(){
         if(KebersihanKelas.getSirkulasiUdara() == 1){
             System.out.println("Sirkulasi Udara Di ruangan Lancar Sesuai");
+            Sesuai++;
         }else if(KebersihanKelas.getSirkulasiUdara() == 2){
             System.out.println("Sirkulasi Udara Di ruangan Tidak Lancar");
         }
         
         if(KebersihanKelas.getnilaiPencahayaan() >= 250 && KebersihanKelas.getnilaiPencahayaan() <=350){
             System.out.println("Nilai Pencahayaan Ruangan = "+KebersihanKelas.getnilaiPencahayaan()+" Sesuai");
+            Sesuai++;
         }else{
             System.out.println("Nilai Pencahayaan Ruangan = "+KebersihanKelas.getnilaiPencahayaan());
         }
         
         if(KebersihanKelas.getKelembapan() >= 70 && KebersihanKelas.getKelembapan()<= 80){
             System.out.println("Nilai Kelembapan Ruangan = "+KebersihanKelas.getKelembapan()+" Sesuai");
+            Sesuai++;
         }else{
             System.out.println("Nilai Kelembapan Ruangan = "+KebersihanKelas.getKelembapan());
         }
         
         if(KebersihanKelas.getsuhu() >= 25 && KebersihanKelas.getsuhu()<= 35){
             System.out.println("Nilai Suhu Ruangan = "+KebersihanKelas.getsuhu()+" Sesuai");
+            Sesuai++;
         }else{
             System.out.println("Nilai Suhu Ruangan = "+KebersihanKelas.getsuhu());
         }
