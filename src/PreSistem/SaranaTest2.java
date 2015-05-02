@@ -1,14 +1,14 @@
 package PreSistem;
 
-import java.util.Scanner;
 
-public class SaranaTest2 {
-	Scanner input = new Scanner(System.in);
+
+public class SaranaTest2 extends IndukClass  {
+
 	SaranaRuangan2 KondisiKelas3 = new SaranaRuangan2();
 	int Kkipas = 0;
 	int PkipasL = 0;
 	int PkipasS = 0;
-	boolean Jsteker = false;
+	
 	
 	public void InputKipasAngin(){
 		System.out.println(" ");
@@ -34,20 +34,27 @@ public class SaranaTest2 {
 		System.out.println(" ");
 	}
 	public void AnalisisKipasAngin(){
-		if(KondisiKelas3.getJumlahKipasAngin() >=1){
+		if(KondisiKelas3.getJumlahKipasAngin() >=0){
 			System.out.print("Jumlah Kipas Angin "+KondisiKelas3.getJumlahKipasAngin());
                     if(KondisiKelas3.getJumlahKipasAngin() >=2){
                         System.out.println(" Sesuai");
+                        Sesuai++;
                     }
 		}
-		if(Kkipas >= 1){
+		if(Kkipas >= 0){
 			System.out.print("Jumlah Kondisi Kipas Angin Yang Baik "+Kkipas);
-                        if(Kkipas >= 2){
+                        if(Kkipas == KondisiKelas3.getJumlahKipasAngin()&& Kkipas >= 2){
                             System.out.println(" Sesuai");
+                            Sesuai++;
                         }
 		}
-		if(PkipasL >= 1 ){
+		if(PkipasL  >= 0 ){
 			System.out.println("Jumlah Posisi Kipas Angin di Atap Ruangan "+PkipasL);
+                        if(PkipasL == KondisiKelas3.getJumlahKipasAngin()&& PkipasL>= 2){
+                            System.out.print("Sesuai");
+                             Sesuai++;
+                        }
+                       
 		}
 	}
 	
@@ -81,17 +88,34 @@ public class SaranaTest2 {
 		}
 	}
 	public void AnalisisAC(){
-		if(KondisiKelas3.getJumlahAC() >=1){
-			System.out.println("Jumlah AC "+KondisiKelas3.getJumlahAC() +" Sesuai");
+		if(KondisiKelas3.getJumlahAC() >=0){
+			System.out.println("Jumlah AC "+KondisiKelas3.getJumlahAC());
+                          if(KondisiKelas3.getJumlahAC()>=1){
+                             System.out.print("Sesuai");
+                             Sesuai++;
+                          }
+                       
 		}
-		if(KAC >= 1){
-			System.out.println("Jumlah Kondisi AC Yang Baik "+KAC +" Sesuai");
+		if(KAC >= 0){
+			System.out.println("Jumlah Kondisi AC Yang Baik "+KAC );
+                        if( KAC == KondisiKelas3.getJumlahAC()&& KAC >= 1){
+                            System.out.print("Sesuai");
+                            Sesuai++;
+                        }
+                     
 		}
-		if(PACB >= 1){
-			System.out.println("Jumlah Posisi AC di Belakang "+PACB +" Sesuai");
+		if(PACB >= 0){
+			System.out.println("Jumlah Posisi AC di Belakang "+PACB );
+                        if(PACB == KondisiKelas3.getJumlahAC() && PACB >= 1){
+                            System.out.print("Sesuai");
+                            Sesuai++;
+                        }
+                        
 		}
-		if(PACS >= 1){
-			System.out.println("Jumlah Posisi AC di Samping "+PACS +" Sesuai");
+		if(PACS >= 0){
+			System.out.println("Jumlah Posisi AC di Samping "+PACS );
+                        if(PACS == KondisiKelas3.getJumlahAC()&& PACS >= 1)
+                        Sesuai++;
 		}
 	}
 	
@@ -104,8 +128,13 @@ public class SaranaTest2 {
 		KondisiKelas3.setBandwith(input.nextInt());
 	}
 	public void AnalisisInternet(){
-		if(KondisiKelas3.getSSID() == 1){
+		if(KondisiKelas3.getSSID() == 0){
 			System.out.println("Pilihan SSID =  HotSpot UMM Sesuai");
+                        if( KondisiKelas3.getSSID()>= 1){
+                            System.out.print("Sesuai");
+                            Sesuai++;
+                        }
+                       
 		}
 	}
 	
@@ -139,13 +168,21 @@ public class SaranaTest2 {
 		}
 	}
 	public void AnalisisCCTV(){
-		if(KondisiKelas3.getJumlahCCTV() == 2){
-                    System.out.println("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV()+" Sesuai");
+		if(KondisiKelas3.getJumlahCCTV() == 0){
+                    System.out.println("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV());
+                    if(KondisiKelas3.getJumlahCCTV()>= 2){
+                        System.out.print("Sesuai");
+                        Sesuai++;
+                    } 
 		}else{
                     System.out.println("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV());
                 }
-		if(KCCTV >= 2){
-                    System.out.println("Jumlah CCTV yang Berkondisi Baik = "+KCCTV+" Sesuai");
+		if(KCCTV >= 0){
+                    System.out.println("Jumlah CCTV yang Berkondisi Baik = "+KCCTV);
+                    if(KCCTV == KondisiKelas3.getJumlahCCTV()&& KCCTV >= 2){
+                        System.out.print("Sesuai");
+                         Sesuai++;
+                    }   
 		}else{
                     System.out.println("Jumlah CCTV yang Berkondisi Baik = "+KCCTV);
                 }
