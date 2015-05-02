@@ -39,6 +39,8 @@ public class SaranaTest2 extends IndukClass  {
                     if(KondisiKelas3.getJumlahKipasAngin() >=2){
                         System.out.println(" Sesuai");
                         Sesuai++;
+                    }else{
+                        System.out.println();
                     }
 		}
 		if(Kkipas >= 0){
@@ -46,15 +48,18 @@ public class SaranaTest2 extends IndukClass  {
                         if(Kkipas == KondisiKelas3.getJumlahKipasAngin()&& Kkipas >= 2){
                             System.out.println(" Sesuai");
                             Sesuai++;
+                        }else{
+                            System.out.println();
                         }
 		}
 		if(PkipasL  >= 0 ){
-			System.out.println("Jumlah Posisi Kipas Angin di Atap Ruangan "+PkipasL);
+			System.out.print("Jumlah Posisi Kipas Angin di Atap Ruangan "+PkipasL);
                         if(PkipasL == KondisiKelas3.getJumlahKipasAngin()&& PkipasL>= 2){
-                            System.out.print("Sesuai");
+                            System.out.println(" Sesuai");
                              Sesuai++;
+                        }else{
+                            System.out.println();
                         }
-                       
 		}
 	}
 	
@@ -89,33 +94,40 @@ public class SaranaTest2 extends IndukClass  {
 	}
 	public void AnalisisAC(){
 		if(KondisiKelas3.getJumlahAC() >=0){
-			System.out.println("Jumlah AC "+KondisiKelas3.getJumlahAC());
+			System.out.print("Jumlah AC "+KondisiKelas3.getJumlahAC());
                           if(KondisiKelas3.getJumlahAC()>=1){
-                             System.out.print("Sesuai");
+                             System.out.println("Sesuai");
                              Sesuai++;
+                          }else{
+                              System.out.println();
                           }
-                       
 		}
 		if(KAC >= 0){
-			System.out.println("Jumlah Kondisi AC Yang Baik "+KAC );
+			System.out.print("Jumlah Kondisi AC Yang Baik "+KAC );
                         if( KAC == KondisiKelas3.getJumlahAC()&& KAC >= 1){
-                            System.out.print("Sesuai");
+                            System.out.println("Sesuai");
                             Sesuai++;
+                        }else{
+                            System.out.println();
                         }
-                     
 		}
 		if(PACB >= 0){
-			System.out.println("Jumlah Posisi AC di Belakang "+PACB );
+			System.out.print("Jumlah Posisi AC di Belakang "+PACB );
                         if(PACB == KondisiKelas3.getJumlahAC() && PACB >= 1){
-                            System.out.print("Sesuai");
+                            System.out.println("Sesuai");
                             Sesuai++;
+                        }else{
+                            System.out.println();
                         }
-                        
 		}
 		if(PACS >= 0){
-			System.out.println("Jumlah Posisi AC di Samping "+PACS );
-                        if(PACS == KondisiKelas3.getJumlahAC()&& PACS >= 1)
-                        Sesuai++;
+			System.out.print("Jumlah Posisi AC di Samping "+PACS );
+                        if(PACS == KondisiKelas3.getJumlahAC()&& PACS >= 1){
+                            System.out.println("Sesuai");
+                            Sesuai++;    
+                        }else{
+                            System.out.println();
+                        }
 		}
 	}
 	
@@ -129,12 +141,13 @@ public class SaranaTest2 extends IndukClass  {
 	}
 	public void AnalisisInternet(){
 		if(KondisiKelas3.getSSID() == 0){
-			System.out.println("Pilihan SSID =  HotSpot UMM Sesuai");
+			System.out.print("Pilihan SSID =  HotSpot UMM Sesuai");
                         if( KondisiKelas3.getSSID()>= 1){
-                            System.out.print("Sesuai");
+                            System.out.println("Sesuai");
                             Sesuai++;
+                        }else{
+                            System.out.println();
                         }
-                       
 		}
 	}
 	
@@ -169,33 +182,37 @@ public class SaranaTest2 extends IndukClass  {
 	}
 	public void AnalisisCCTV(){
 		if(KondisiKelas3.getJumlahCCTV() == 0){
-                    System.out.println("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV());
+                    System.out.print("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV());
                     if(KondisiKelas3.getJumlahCCTV()>= 2){
-                        System.out.print("Sesuai");
+                        System.out.println("Sesuai");
                         Sesuai++;
-                    } 
-		}else{
-                    System.out.println("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV());
+                    }else{
+                        System.out.println();
+                    }
                 }
 		if(KCCTV >= 0){
-                    System.out.println("Jumlah CCTV yang Berkondisi Baik = "+KCCTV);
+                    System.out.print("Jumlah CCTV yang Berkondisi Baik = "+KCCTV);
                     if(KCCTV == KondisiKelas3.getJumlahCCTV()&& KCCTV >= 2){
-                        System.out.print("Sesuai");
+                        System.out.println("Sesuai");
                          Sesuai++;
-                    }   
-		}else{
-                    System.out.println("Jumlah CCTV yang Berkondisi Baik = "+KCCTV);
+                    }else{
+                        System.out.println();
+                    }
                 }
 		if(PCCTVD >= 1){
                     for(int c = 1 ;c<=PCCTVD;c++ ){
-                            System.out.println("Posisi CCTV ke "+c+" = "+"Di Depan" );
+                        System.out.println("Posisi CCTV ke "+c+" = "+"Di Depan" );
                     }
 		}
 		if(PCCTVB >= 1){
                     for(int c = 1 ;c<=PCCTVB;c++ ){
-                            System.out.println("Posisi CCTV ke "+c+" = "+"Di Belakang" );
+                        System.out.println("Posisi CCTV ke "+c+" = "+"Di Belakang" );
                     }
 		}
+                if(PCCTVD+PCCTVB == KondisiKelas3.getJumlahCCTV()&& PCCTVD+PCCTVB >=2){
+                        System.out.println("Posisi CCTV Sesuai");
+                        Sesuai++;
+                }
 	}
 	
 	public void saranatest2(){

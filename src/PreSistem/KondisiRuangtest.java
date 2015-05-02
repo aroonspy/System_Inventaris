@@ -1,19 +1,13 @@
-
 package PreSistem;
-
-
-
 
 public class KondisiRuangtest extends IndukClass{
     
-    KondisiRuang KondisiKelas = new KondisiRuang();
-
-        
+        KondisiRuang KondisiKelas = new KondisiRuang();
         private String bentuk;
         private double Rasio;
         private String analisis;
   
-        public  void kondisi(){
+    public  void kondisi(){
            System.out.print("Masukkan Panjang Ruangan = ");
            KondisiKelas.setPanjang(input.nextInt());
            System.out.print("Masukkan Lebar Ruangan = ");
@@ -24,11 +18,10 @@ public class KondisiRuangtest extends IndukClass{
            KondisiKelas.setJumlahpintu(input.nextInt());
            System.out.print("Masukkan jumlah jendela = ");
            KondisiKelas.setJumlahjendela(input.nextInt());
-        }
-       
-       public   int luas(){
+    }   
+    public   int luas(){
            return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
-       }
+    }
     public  void bentuk(){
         if(KondisiKelas.getPanjang()!=luas()){
             System.out.println("Bentuk Ruangan Persegi Panjang sesuai");
@@ -38,31 +31,34 @@ public class KondisiRuangtest extends IndukClass{
         }
     }
     
-    public   void analisis(){
-        
+    public   void analisis(){   
         Rasio = luas()/ KondisiKelas.getJumlahkursi();
         if (Rasio >= 0){
             System.out.print("Rasio raungan = "+Rasio);
             if(Rasio >= 0.5){
-            System.out.println("Rasio Ruangan Sesuai");
-            Sesuai++;
+                System.out.println("Rasio Ruangan Sesuai");
+                Sesuai++;
+            }else{
+                System.out.println();
+           }
         }
-        }
-        
         if(KondisiKelas.getJumlahpintu()>= 0){
             System.out.print("jumlah pintu"+KondisiKelas.getJumlahpintu());
             if(KondisiKelas.getJumlahpintu()>=2){
-            System.out.println("Sesuai"); 
-            Sesuai ++;
-        }
+                System.out.println("Sesuai"); 
+                Sesuai ++;
+            }else{
+                System.out.println();
+            }   
         }
         if(KondisiKelas.getJumlahjendela()>=0){
             System.out.print("jumlah jendela"+KondisiKelas.getJumlahjendela());
             if(KondisiKelas.getJumlahjendela()>=1){
                 System.out.println("Sesuai");
-                Sesuai ++;
-                
-        }
+                Sesuai ++;      
+            }else{
+                System.out.println();
+            }
         }
     }
     
@@ -71,8 +67,5 @@ public class KondisiRuangtest extends IndukClass{
         luas();
         bentuk();
         analisis();
-                
-        
     }
-    
 }
