@@ -1,51 +1,68 @@
 
 package PreSistem;
 
-import java.util.Scanner;
 
 
-public class KondisiRuangtest {
-     Scanner input = new Scanner(System.in);
- KondisiRuang KondisiKelas = new KondisiRuang();
 
- private int luas;
+public class KondisiRuangtest extends IndukClass{
+    
+    KondisiRuang KondisiKelas = new KondisiRuang();
+
+        
         private String bentuk;
-       private double Rasio;
+        private double Rasio;
         private String analisis;
   
-       public  void kondisi(){
+        public  void kondisi(){
            System.out.print("Masukkan Panjang Ruangan = ");
            KondisiKelas.setPanjang(input.nextInt());
            System.out.print("Masukkan Lebar Ruangan = ");
-           KondisiKelas.setLebar(input.nextInt());}
+           KondisiKelas.setLebar(input.nextInt());
+           System.out.print("Masukkan jumlah kursi = ");
+           KondisiKelas.setJumlahkursi(input.nextInt());
+           System.out.print("Masukkan jumlah pintu = ");
+           KondisiKelas.setJumlahpintu(input.nextInt());
+           System.out.print("Masukkan jumlah jendela = ");
+           KondisiKelas.setJumlahjendela(input.nextInt());
+        }
        
        public   int luas(){
            return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
        }
     public  void bentuk(){
-        if(KondisiKelas.getPanjang()!=luas){
+        if(KondisiKelas.getPanjang()!=luas()){
             System.out.println("Bentuk Ruangan Persegi Panjang sesuai");
+            Sesuai ++;
         }else{
             System.out.println("Bentuk Ruangan Tidak Persegi Panjang");
         }
     }
     
     public   void analisis(){
-        System.out.print("Masukkan jumlah kursi = ");
-        KondisiKelas.setJumlahkursi(input.nextInt());
-        Rasio = luas()/KondisiKelas.getJumlahkursi();
-        if(Rasio >= 0.5){
+        
+        Rasio = luas()/ KondisiKelas.getJumlahkursi();
+        if (Rasio >= 0){
+            System.out.print("Rasio raungan = "+Rasio);
+            if(Rasio >= 0.5){
             System.out.println("Rasio Ruangan Sesuai");
+            Sesuai++;
         }
-        System.out.print("Masukkan jumlah pintu = ");
-        KondisiKelas.setJumlahpintu(input.nextInt());
-        if(KondisiKelas.getJumlahpintu()>=2){
+        }
+        
+        if(KondisiKelas.getJumlahpintu()>= 0){
+            System.out.print("jumlah pintu"+KondisiKelas.getJumlahpintu());
+            if(KondisiKelas.getJumlahpintu()>=2){
             System.out.println("Sesuai"); 
+            Sesuai ++;
         }
-        System.out.print("Masukkan jumlah jendela = ");
-        KondisiKelas.setJumlahjendela(input.nextInt());
-        if(KondisiKelas.getJumlahjendela()>=1){
+        }
+        if(KondisiKelas.getJumlahjendela()>=0){
+            System.out.print("jumlah jendela"+KondisiKelas.getJumlahjendela());
+            if(KondisiKelas.getJumlahjendela()>=1){
                 System.out.println("Sesuai");
+                Sesuai ++;
+                
+        }
         }
     }
     
