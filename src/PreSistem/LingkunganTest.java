@@ -58,11 +58,11 @@ public class LingkunganTest extends IndukClass{
             System.out.println("Kondisi Jendela ruangan Tidak Bersih");
         }
         
-        if(LingkunganKelas.getKondisiLantai() == 1 && LingkunganKelas.getKondisiDinding() == 1 &&LingkunganKelas.getKondisiAtap() == 1
+        /*if(LingkunganKelas.getKondisiLantai() == 1 && LingkunganKelas.getKondisiDinding() == 1 &&LingkunganKelas.getKondisiAtap() == 1
               &&LingkunganKelas.getKondisiPintu() == 1 &&LingkunganKelas.getKondisiJendela() == 1){
             System.out.println("Kondisi Lingkungan Ruang Kelas Bersih Sesuai");
             Sesuai++;
-        }
+        }*/
     }
     public void Lingkungan(){
         inputLingkungan();

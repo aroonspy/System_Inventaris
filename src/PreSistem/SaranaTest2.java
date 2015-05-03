@@ -140,14 +140,9 @@ public class SaranaTest2 extends IndukClass  {
 		KondisiKelas3.setBandwith(input.nextInt());
 	}
 	public void AnalisisInternet(){
-		if(KondisiKelas3.getSSID() == 0){
-			System.out.print("Pilihan SSID =  HotSpot UMM Sesuai");
-                        if( KondisiKelas3.getSSID()>= 1){
-                            System.out.println("Sesuai");
-                            Sesuai++;
-                        }else{
-                            System.out.println();
-                        }
+		if(KondisiKelas3.getSSID() == 1){
+                    System.out.print("Pilihan SSID =  HotSpot UMM");
+                    Sesuai++;
 		}
 	}
 	
@@ -199,12 +194,12 @@ public class SaranaTest2 extends IndukClass  {
                         System.out.println();
                     }
                 }
-		if(PCCTVD >= 1){
+		if(PCCTVD >= 0){
                     for(int c = 1 ;c<=PCCTVD;c++ ){
                         System.out.println("Posisi CCTV ke "+c+" = "+"Di Depan" );
                     }
 		}
-		if(PCCTVB >= 1){
+		if(PCCTVB >= 0){
                     for(int c = 1 ;c<=PCCTVB;c++ ){
                         System.out.println("Posisi CCTV ke "+c+" = "+"Di Belakang" );
                     }

@@ -65,12 +65,6 @@ public class KenyamananTest extends IndukClass{
         }else if(Kenyamanan.getKeausan()== 2){
             System.out.println("Keausan Di ruangan aus");
         }
-        
-        if(Kenyamanan.getKebisingan() == 1 && Kenyamanan.getBau() == 1 &&  Kenyamanan.getKebocoran() == 1
-                && Kenyamanan.getKerusakan() == 1 && Kenyamanan.getKeausan() == 1){
-            System.out.println("Semua kondisi ruang kelas Sesuai");
-            Sesuai++;
-        }
     }
      
     public void Kenyamanantest(){
