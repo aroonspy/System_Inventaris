@@ -85,8 +85,9 @@ public class SaranaTest extends IndukClass {
 		for(int a = 1; a<= KondisiKelas2.getJumlahKabelLCD(); a++){
 			System.out.print("Masukkan Kondisi Kabel LCD ke "+a+"\t: ");
 			KondisiKelas2.setKondisiKabelLCD(input.nextInt());
-				if(KondisiKelas2.getKondisiKabelLCD() == 1){
-					KLCD++; //kondisi LCD baik ++
+				if(KondisiKelas2.getKondisiKabelLCD() == 1){	
+                                    KLCD++; //kondisi LCD baik ++
+                                    System.out.println();
 				}
                 }
                 System.out.println("1. Posisi Dekat Dosen");

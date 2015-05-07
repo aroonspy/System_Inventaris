@@ -8,6 +8,7 @@ package PreSistem;
 
 public class KebersihanTest extends IndukClass{
     KebersihanRuangKelas KebersihanKelas = new KebersihanRuangKelas();
+    public double Kebersihan_Sesuai = 0.0;
     public void inputKebersihan(){
         System.out.println("1. Lancar");
         System.out.println("2. Tidak Lancar");
@@ -24,34 +25,35 @@ public class KebersihanTest extends IndukClass{
         KebersihanKelas.setsuhu(input.nextInt());
     }
     
-    public void AnalisisKebersihan(){
+    public double AnalisisKebersihan(){
         if(KebersihanKelas.getSirkulasiUdara() == 1){
             System.out.println("Sirkulasi Udara Di ruangan Lancar Sesuai");
-            Sesuai++;
+            Kebersihan_Sesuai++;
         }else if(KebersihanKelas.getSirkulasiUdara() == 2){
             System.out.println("Sirkulasi Udara Di ruangan Tidak Lancar");
         }
         
         if(KebersihanKelas.getnilaiPencahayaan() >= 250 && KebersihanKelas.getnilaiPencahayaan() <=350){
             System.out.println("Nilai Pencahayaan Ruangan = "+KebersihanKelas.getnilaiPencahayaan()+" Sesuai");
-            Sesuai++;
+            Kebersihan_Sesuai++;
         }else{
             System.out.println("Nilai Pencahayaan Ruangan = "+KebersihanKelas.getnilaiPencahayaan());
         }
         
         if(KebersihanKelas.getKelembapan() >= 70 && KebersihanKelas.getKelembapan()<= 80){
             System.out.println("Nilai Kelembapan Ruangan = "+KebersihanKelas.getKelembapan()+" Sesuai");
-            Sesuai++;
+            Kebersihan_Sesuai++;
         }else{
             System.out.println("Nilai Kelembapan Ruangan = "+KebersihanKelas.getKelembapan());
         }
         
         if(KebersihanKelas.getsuhu() >= 25 && KebersihanKelas.getsuhu()<= 35){
             System.out.println("Nilai Suhu Ruangan = "+KebersihanKelas.getsuhu()+" Sesuai");
-            Sesuai++;
+            Kebersihan_Sesuai++;
         }else{
             System.out.println("Nilai Suhu Ruangan = "+KebersihanKelas.getsuhu());
         }
+        return Kebersihan_Sesuai;
     }
     public void Kebersihantest(){
         inputKebersihan();

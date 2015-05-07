@@ -17,18 +17,25 @@ public class AllTest {
     public static KondisiRuangtest Kondisi = new KondisiRuangtest();
     public static IndukClass Induk = new IndukClass();
     
+    public static double rata_rata;
     
+    public static double Rata_rata(double Lingkungan, double Kebersihan, double Kenyamanan, double Keamanan){
+        rata_rata = (Lingkungan + Kebersihan + Kenyamanan + Keamanan)/17*100;
+        System.out.println("Jumlah rata_rata Nilai Sesuai = " +rata_rata +" %");
+        return rata_rata;
+    }
     public static void main(String[] args){
-       Login.Logintest();
-       Identitas.IDKelas();
-       Kondisi.kondisitest();
-       Sarana1.saranatest();
-       Sarana2.saranatest2();
+       //Login.Logintest();
+       //Identitas.IDKelas();
+       //Kondisi.kondisitest();
+       //Sarana1.saranatest();
+       //Sarana2.saranatest2();
        Lingkungan.Lingkungan();
        Kebersihan.Kebersihantest();
        Kenyamanan.Kenyamanantest();
        Keamanan.Keamanantest();
-       Induk.rata_rata();
+       Rata_rata(Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, Keamanan.Keamanan_Sesuai);
+       //Induk.rata_rata();
       
     }
 }

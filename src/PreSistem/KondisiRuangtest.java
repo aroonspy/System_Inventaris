@@ -20,7 +20,7 @@ public class KondisiRuangtest extends IndukClass{
            KondisiKelas.setJumlahjendela(input.nextInt());
     }   
     public   int luas(){
-           return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
+        return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
     }
     public  void bentuk(){
         if(KondisiKelas.getPanjang()!=luas()){
@@ -34,27 +34,27 @@ public class KondisiRuangtest extends IndukClass{
     public   void analisis(){   
         Rasio = luas()/ KondisiKelas.getJumlahkursi();
         if (Rasio >= 0){
-            System.out.print("Rasio raungan = "+Rasio);
+            System.out.print("Rasio ruangan = "+Rasio);
             if(Rasio >= 0.5){
-                System.out.println("Rasio Ruangan Sesuai");
+                System.out.println(" Sesuai");
                 Sesuai++;
             }else{
                 System.out.println();
            }
         }
         if(KondisiKelas.getJumlahpintu()>= 0){
-            System.out.print("jumlah pintu"+KondisiKelas.getJumlahpintu());
+            System.out.print("jumlah pintu "+KondisiKelas.getJumlahpintu());
             if(KondisiKelas.getJumlahpintu()>=2){
-                System.out.println("Sesuai"); 
+                System.out.println(" Sesuai"); 
                 Sesuai ++;
             }else{
                 System.out.println();
             }   
         }
         if(KondisiKelas.getJumlahjendela()>=0){
-            System.out.print("jumlah jendela"+KondisiKelas.getJumlahjendela());
+            System.out.print("jumlah jendela "+KondisiKelas.getJumlahjendela());
             if(KondisiKelas.getJumlahjendela()>=1){
-                System.out.println("Sesuai");
+                System.out.println(" Sesuai");
                 Sesuai ++;      
             }else{
                 System.out.println();
@@ -65,7 +65,9 @@ public class KondisiRuangtest extends IndukClass{
     public   void kondisitest(){
         kondisi();
         luas();
+        System.out.println("===================================================");
         bentuk();
         analisis();
+        System.out.println("===================================================");
     }
 }

@@ -8,6 +8,7 @@ package PreSistem;
 
 public class KenyamananTest extends IndukClass{
     KenyamananRuangan Kenyamanan = new KenyamananRuangan();
+    public double Kenyamanan_Sesuai =0.0;
     public void inputKenyamanan(){
         System.out.println("1. Tidak Bising");
         System.out.println("2. Bising");
@@ -30,41 +31,42 @@ public class KenyamananTest extends IndukClass{
         System.out.print("Masukkan Nilai Keausan = ");
         Kenyamanan.setKeausan(input.nextInt());
     }
-    public void AnalisisKenyamanan(){
+    public double AnalisisKenyamanan(){
         if(Kenyamanan.getKebisingan()== 1){
             System.out.println("Kebisingan Di ruangan Tidak Bising Sesuai");
-            Sesuai++;
+            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKebisingan()== 2){
             System.out.println("Kebisingan Di ruangan Bising");
         }
         
         if(Kenyamanan.getBau()== 1){
             System.out.println("Bau Di ruangan Tidak Bau Sesuai");
-            Sesuai++;
+            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getBau()== 2){
             System.out.println("Bau Di ruangan Bau");
         }
         
         if(Kenyamanan.getKebocoran()== 1){
             System.out.println("Kebocoran Di ruangan Tidak Bocor Sesuai");
-            Sesuai++;
+            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKebocoran()== 2){
             System.out.println("Kebocoran Di ruangan Bocor");
         }
         
         if(Kenyamanan.getKerusakan()== 1){
             System.out.println("Kerusakan Di ruangan Tidak Rusak Sesuai");
-            Sesuai++;
+            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKerusakan()== 2){
             System.out.println("Kerusakan Di ruangan Rusak");
         }
         
         if(Kenyamanan.getKeausan()== 1){
             System.out.println("Keausan Di ruangan Tidak aus Sesuai");
-            Sesuai++;
+            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKeausan()== 2){
             System.out.println("Keausan Di ruangan aus");
         }
+        return Kenyamanan_Sesuai;
     }
      
     public void Kenyamanantest(){

@@ -8,6 +8,7 @@ package PreSistem;
 
 public class LingkunganTest extends IndukClass{
     LingkunganRuangKelas LingkunganKelas =new LingkunganRuangKelas();
+    public double Lingkungan_Sesuai = 0.0;
     public void inputLingkungan(){
         System.out.println("1. Kondisi Bersih");
         System.out.println("2. Kondisi Tidak Bersih");
@@ -22,38 +23,38 @@ public class LingkunganTest extends IndukClass{
         System.out.print("Masukkan Kondisi Jendela = ");
         LingkunganKelas.setKondisiJendela(input.nextInt());
     }
-    public void AnalisisKondisi(){
+    public double AnalisisKondisi(){
         if(LingkunganKelas.getKondisiLantai()== 1){
             System.out.println("Kondisi Lantai ruangan Bersih Sesuai");
-            Sesuai++;
+            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiLantai()== 2){
             System.out.println("Kondisi Lantai ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiDinding()== 1){
             System.out.println("Kondisi Dinding ruangan Bersih Sesuai");
-            Sesuai++;
+            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiDinding()== 2){
             System.out.println("Kondisi Dinding ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiAtap()== 1){
             System.out.println("Kondisi Atap ruangan Bersih Sesuai");
-            Sesuai++;
+            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiAtap()== 2){
             System.out.println("Kondisi Atap ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiPintu()== 1){
             System.out.println("Kondisi Pintu ruangan Bersih Sesuai");
-            Sesuai++;
+            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiPintu()== 2){
             System.out.println("Kondisi Pintu ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiJendela()== 1){
             System.out.println("Kondisi Jendela ruangan Bersih Sesuai");
-            Sesuai++;
+            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiJendela()== 2){
             System.out.println("Kondisi Jendela ruangan Tidak Bersih");
         }
@@ -63,6 +64,7 @@ public class LingkunganTest extends IndukClass{
             System.out.println("Kondisi Lingkungan Ruang Kelas Bersih Sesuai");
             Sesuai++;
         }*/
+        return Lingkungan_Sesuai;
     }
     public void Lingkungan(){
         inputLingkungan();
