@@ -1,4 +1,6 @@
-// di buat oleh : Khopsawati khotimah 
+//di buat oleh:
+//Nama  : Khopsawati khotimah
+// NIM  :201410370311025
 
 package PreSistem;
 

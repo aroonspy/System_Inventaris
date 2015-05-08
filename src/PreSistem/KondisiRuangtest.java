@@ -1,8 +1,13 @@
+//di buat oleh :
+//Nama  : Khopsawati khotimah
+// NIM  :201410370311025
+
 package PreSistem;
 
 public class KondisiRuangtest extends IndukClass{
     
         KondisiRuang KondisiKelas = new KondisiRuang();
+        public double KondisiRuang_Sesuai = 0.0;
         private String bentuk;
         private double Rasio;
         private String analisis;
@@ -22,22 +27,23 @@ public class KondisiRuangtest extends IndukClass{
     public   int luas(){
         return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
     }
-    public  void bentuk(){
+    public double bentuk(){
         if(KondisiKelas.getPanjang()!=luas()){
             System.out.println("Bentuk Ruangan Persegi Panjang sesuai");
-            Sesuai ++;
+           KondisiRuang_Sesuai ++;
         }else{
             System.out.println("Bentuk Ruangan Tidak Persegi Panjang");
         }
+            return KondisiRuang_Sesuai;
     }
     
-    public   void analisis(){   
+    public double analisis(){   
         Rasio = luas()/ KondisiKelas.getJumlahkursi();
         if (Rasio >= 0){
             System.out.print("Rasio ruangan = "+Rasio);
             if(Rasio >= 0.5){
                 System.out.println(" Sesuai");
-                Sesuai++;
+                KondisiRuang_Sesuai++;
             }else{
                 System.out.println();
            }
@@ -46,7 +52,7 @@ public class KondisiRuangtest extends IndukClass{
             System.out.print("jumlah pintu "+KondisiKelas.getJumlahpintu());
             if(KondisiKelas.getJumlahpintu()>=2){
                 System.out.println(" Sesuai"); 
-                Sesuai ++;
+                KondisiRuang_Sesuai++;
             }else{
                 System.out.println();
             }   
@@ -55,11 +61,12 @@ public class KondisiRuangtest extends IndukClass{
             System.out.print("jumlah jendela "+KondisiKelas.getJumlahjendela());
             if(KondisiKelas.getJumlahjendela()>=1){
                 System.out.println(" Sesuai");
-                Sesuai ++;      
+                KondisiRuang_Sesuai ++;      
             }else{
                 System.out.println();
             }
         }
+            return KondisiRuang_Sesuai;
     }
     
     public   void kondisitest(){

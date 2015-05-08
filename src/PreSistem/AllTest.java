@@ -19,21 +19,21 @@ public class AllTest {
     
     public static double rata_rata;
     
-    public static double Rata_rata(double Lingkungan, double Kebersihan, double Kenyamanan, double Keamanan){
-        rata_rata = (Lingkungan + Kebersihan + Kenyamanan + Keamanan)/17*100;
+    public static double Rata_rata(double Kondisi,double Lingkungan, double Kebersihan, double Kenyamanan, double Keamanan){
+        rata_rata = (Kondisi +Lingkungan + Kebersihan + Kenyamanan + Keamanan)/21*100;
         System.out.println("Jumlah rata_rata Nilai Sesuai = " +rata_rata +" %");
         return rata_rata;
     }
     public static void main(String[] args){
        //Login.Logintest();
        //Identitas.IDKelas();
-       //Kondisi.kondisitest();
+       Kondisi.kondisitest();
        //Sarana1.saranatest();
        //Sarana2.saranatest2();
        Lingkungan.Lingkungan();
        Kebersihan.Kebersihantest();
        Kenyamanan.Kenyamanantest();
        Keamanan.Keamanantest();
-       Rata_rata(Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, Keamanan.Keamanan_Sesuai);      
+       Rata_rata(Kondisi.KondisiRuang_Sesuai,Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, Keamanan.Keamanan_Sesuai);      
     }
 }
