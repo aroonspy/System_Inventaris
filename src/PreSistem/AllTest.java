@@ -34,8 +34,6 @@ public class AllTest {
        Kebersihan.Kebersihantest();
        Kenyamanan.Kenyamanantest();
        Keamanan.Keamanantest();
-       Rata_rata(Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, Keamanan.Keamanan_Sesuai);
-       //Induk.rata_rata();
-      
+       Rata_rata(Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, Keamanan.Keamanan_Sesuai);      
     }
 }

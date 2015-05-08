@@ -8,8 +8,8 @@ package PreSistem;
 
 public class KeamananTest extends IndukClass{
     KeamananRuangKelas KeamananRuang = new KeamananRuangKelas();
-    public double Keamanan_Sesuai=0.0;
-    public void inputKeamanan(){
+    public double Keamanan_Sesuai=0.0; 
+    public void inputKeamanan(){ 
         System.out.println("1. Kokoh");
         System.out.println("2. Tidak Kokoh");
         System.out.print("Masukkan Nilai Kekokohan = ");
