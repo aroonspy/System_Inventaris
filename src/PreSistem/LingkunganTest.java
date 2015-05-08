@@ -5,10 +5,10 @@
 */
 package PreSistem;
 
-
 public class LingkunganTest extends IndukClass{
     LingkunganRuangKelas LingkunganKelas =new LingkunganRuangKelas();
     public double Lingkungan_Sesuai = 0.0;
+
     public void inputLingkungan(){
         System.out.println("1. Kondisi Bersih");
         System.out.println("2. Kondisi Tidak Bersih");
@@ -23,6 +23,7 @@ public class LingkunganTest extends IndukClass{
         System.out.print("Masukkan Kondisi Jendela = ");
         LingkunganKelas.setKondisiJendela(input.nextInt());
     }
+    
     public double AnalisisKondisi(){
         if(LingkunganKelas.getKondisiLantai()== 1){
             System.out.println("Kondisi Lantai ruangan Bersih Sesuai");
@@ -58,14 +59,9 @@ public class LingkunganTest extends IndukClass{
         }else if(LingkunganKelas.getKondisiJendela()== 2){
             System.out.println("Kondisi Jendela ruangan Tidak Bersih");
         }
-        
-        /*if(LingkunganKelas.getKondisiLantai() == 1 && LingkunganKelas.getKondisiDinding() == 1 &&LingkunganKelas.getKondisiAtap() == 1
-              &&LingkunganKelas.getKondisiPintu() == 1 &&LingkunganKelas.getKondisiJendela() == 1){
-            System.out.println("Kondisi Lingkungan Ruang Kelas Bersih Sesuai");
-            Sesuai++;
-        }*/
         return Lingkungan_Sesuai;
     }
+    
     public void Lingkungan(){
         inputLingkungan();
         System.out.println("====================================================");

@@ -5,6 +5,7 @@
 */
 package PreSistem;
 
+
 public class KebersihanRuangKelas {
     private int SirkulasiUdara;
     private int nilaiPencahayaan;

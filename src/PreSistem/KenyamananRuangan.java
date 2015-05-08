@@ -5,6 +5,7 @@
 */
 package PreSistem;
 
+
 public class KenyamananRuangan {
     private int Kebisingan;
     private int Bau;

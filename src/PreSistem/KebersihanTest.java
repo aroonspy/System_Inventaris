@@ -9,6 +9,7 @@ package PreSistem;
 public class KebersihanTest extends IndukClass{
     KebersihanRuangKelas KebersihanKelas = new KebersihanRuangKelas();
     public double Kebersihan_Sesuai = 0.0;
+    
     public void inputKebersihan(){
         System.out.println("1. Lancar");
         System.out.println("2. Tidak Lancar");
@@ -55,6 +56,7 @@ public class KebersihanTest extends IndukClass{
         }
         return Kebersihan_Sesuai;
     }
+    
     public void Kebersihantest(){
         inputKebersihan();
         System.out.println();
