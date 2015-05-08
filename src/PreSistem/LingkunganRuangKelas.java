@@ -5,6 +5,7 @@
 */
 package PreSistem;
 
+
 public class LingkunganRuangKelas {
    private int KondisiLantai;
    private int KondisiDinding;

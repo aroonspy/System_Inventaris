@@ -5,6 +5,7 @@
 */
 package PreSistem;
 
+
 public class KeamananRuangKelas {
     private int kekokohan;
     private int kunci;

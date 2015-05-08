@@ -8,7 +8,8 @@ package PreSistem;
 
 public class KenyamananTest extends IndukClass{
     KenyamananRuangan Kenyamanan = new KenyamananRuangan();
-    public double Kenyamanan_Sesuai =0.0;
+    public double Kenyamanan_Sesuai = 0.0;
+    
     public void inputKenyamanan(){
         System.out.println("1. Tidak Bising");
         System.out.println("2. Bising");
@@ -31,6 +32,7 @@ public class KenyamananTest extends IndukClass{
         System.out.print("Masukkan Nilai Keausan = ");
         Kenyamanan.setKeausan(input.nextInt());
     }
+    
     public double AnalisisKenyamanan(){
         if(Kenyamanan.getKebisingan()== 1){
             System.out.println("Kebisingan Di ruangan Tidak Bising Sesuai");
