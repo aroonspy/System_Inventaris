@@ -20,15 +20,15 @@ public class AllTest {
     
     public static void main(String[] args){
        //Login.Logintest();
-       Identitas.IDKelas();
-       Kondisi.kondisitest();
+       //Identitas.IDKelas();
+       //Kondisi.kondisitest();
        //Sarana1.saranatest();
        //Sarana2.saranatest2();
        //Lingkungan.Lingkungan();
        //Kebersihan.Kebersihantest();
-       //Kenyamanan.Kenyamanantest();
+       Kenyamanan.Kenyamanantest();
        //Keamanan.Keamanantest();
-       //Induk.rata_rata();
+       Induk.rata_rata();
       
     }
 }
