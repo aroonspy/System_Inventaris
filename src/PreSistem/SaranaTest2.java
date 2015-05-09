@@ -1,3 +1,7 @@
+// Di buat oleh : 
+// Nama : Sundari
+// Nim : 201410370311022
+
 package PreSistem;
 
 
@@ -8,7 +12,7 @@ public class SaranaTest2 extends IndukClass  {
 	int Kkipas = 0;
 	int PkipasL = 0;
 	int PkipasS = 0;
-	
+	public double SaranaRuang2_Sesuai = 0.0;
 	
 	public void InputKipasAngin(){
 		System.out.println(" ");
@@ -33,12 +37,12 @@ public class SaranaTest2 extends IndukClass  {
 		}
 		System.out.println(" ");
 	}
-	public void AnalisisKipasAngin(){
+	public double AnalisisKipasAngin(){
 		if(KondisiKelas3.getJumlahKipasAngin() >=0){
 			System.out.print("Jumlah Kipas Angin "+KondisiKelas3.getJumlahKipasAngin());
                     if(KondisiKelas3.getJumlahKipasAngin() >=2){
                         System.out.println(" Sesuai");
-                        Sesuai++;
+                        SaranaRuang2_Sesuai++;
                     }else{
                         System.out.println();
                     }
@@ -47,7 +51,7 @@ public class SaranaTest2 extends IndukClass  {
 			System.out.print("Jumlah Kondisi Kipas Angin Yang Baik "+Kkipas);
                         if(Kkipas == KondisiKelas3.getJumlahKipasAngin()&& Kkipas >= 2){
                             System.out.println(" Sesuai");
-                            Sesuai++;
+                            SaranaRuang2_Sesuai++;
                         }else{
                             System.out.println();
                         }
@@ -56,11 +60,12 @@ public class SaranaTest2 extends IndukClass  {
 			System.out.print("Jumlah Posisi Kipas Angin di Atap Ruangan "+PkipasL);
                         if(PkipasL == KondisiKelas3.getJumlahKipasAngin()&& PkipasL>= 2){
                             System.out.println(" Sesuai");
-                             Sesuai++;
+                             SaranaRuang2_Sesuai++;
                         }else{
                             System.out.println();
                         }
 		}
+            return SaranaRuang2_Sesuai;
 	}
 	
 	int KAC = 0;
@@ -92,12 +97,12 @@ public class SaranaTest2 extends IndukClass  {
 			}
 		}
 	}
-	public void AnalisisAC(){
+	public double AnalisisAC(){
 		if(KondisiKelas3.getJumlahAC() >=0){
 			System.out.print("Jumlah AC "+KondisiKelas3.getJumlahAC());
                           if(KondisiKelas3.getJumlahAC()>=1){
                              System.out.println("Sesuai");
-                             Sesuai++;
+                             SaranaRuang2_Sesuai++;
                           }else{
                               System.out.println();
                           }
@@ -106,7 +111,7 @@ public class SaranaTest2 extends IndukClass  {
 			System.out.print("Jumlah Kondisi AC Yang Baik "+KAC );
                         if( KAC == KondisiKelas3.getJumlahAC()&& KAC >= 1){
                             System.out.println("Sesuai");
-                            Sesuai++;
+                            SaranaRuang2_Sesuai++;
                         }else{
                             System.out.println();
                         }
@@ -115,7 +120,7 @@ public class SaranaTest2 extends IndukClass  {
 			System.out.print("Jumlah Posisi AC di Belakang "+PACB );
                         if(PACB == KondisiKelas3.getJumlahAC() && PACB >= 1){
                             System.out.println("Sesuai");
-                            Sesuai++;
+                            SaranaRuang2_Sesuai++;
                         }else{
                             System.out.println();
                         }
@@ -124,11 +129,12 @@ public class SaranaTest2 extends IndukClass  {
 			System.out.print("Jumlah Posisi AC di Samping "+PACS );
                         if(PACS == KondisiKelas3.getJumlahAC()&& PACS >= 1){
                             System.out.println("Sesuai");
-                            Sesuai++;    
+                            SaranaRuang2_Sesuai++;    
                         }else{
                             System.out.println();
                         }
 		}
+            return SaranaRuang2_Sesuai;
 	}
 	
 	public void InputSSID(){
@@ -139,11 +145,12 @@ public class SaranaTest2 extends IndukClass  {
 		System.out.print("Masukkan Besar Bandwith \t: ");
 		KondisiKelas3.setBandwith(input.nextInt());
 	}
-	public void AnalisisInternet(){
+	public double AnalisisInternet(){
 		if(KondisiKelas3.getSSID() == 1){
                     System.out.print("Pilihan SSID =  HotSpot UMM");
-                    Sesuai++;
+                    SaranaRuang2_Sesuai++;
 		}
+            return SaranaRuang2_Sesuai;
 	}
 	
 	static int KCCTV = 0;
@@ -175,12 +182,12 @@ public class SaranaTest2 extends IndukClass  {
 			}
 		}
 	}
-	public void AnalisisCCTV(){
+	public double AnalisisCCTV(){
 		if(KondisiKelas3.getJumlahCCTV() == 0){
                     System.out.print("Jumlah CCTV = "+KondisiKelas3.getJumlahCCTV());
                     if(KondisiKelas3.getJumlahCCTV()>= 2){
                         System.out.println("Sesuai");
-                        Sesuai++;
+                        SaranaRuang2_Sesuai++;
                     }else{
                         System.out.println();
                     }
@@ -189,7 +196,7 @@ public class SaranaTest2 extends IndukClass  {
                     System.out.print("Jumlah CCTV yang Berkondisi Baik = "+KCCTV);
                     if(KCCTV == KondisiKelas3.getJumlahCCTV()&& KCCTV >= 2){
                         System.out.println("Sesuai");
-                         Sesuai++;
+                         SaranaRuang2_Sesuai++;
                     }else{
                         System.out.println();
                     }
@@ -206,8 +213,9 @@ public class SaranaTest2 extends IndukClass  {
 		}
                 if(PCCTVD+PCCTVB == KondisiKelas3.getJumlahCCTV()&& PCCTVD+PCCTVB >=2){
                         System.out.println("Posisi CCTV Sesuai");
-                        Sesuai++;
+                        SaranaRuang2_Sesuai++;
                 }
+            return SaranaRuang2_Sesuai;
 	}
 	
 	public void saranatest2(){

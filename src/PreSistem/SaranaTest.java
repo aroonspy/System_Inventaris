@@ -1,3 +1,6 @@
+// Di buat oleh : 
+// Nama : Sundari
+// Nim : 201410370311022
 package PreSistem;
 
 
@@ -7,7 +10,7 @@ public class SaranaTest extends IndukClass {
         int Ksteker =0;
 	int PstekerD=0;
 	int PstekerP=0;
-
+        public double SaranaRuang_Sesuai = 0.0;
 	public void InputSteker(){
                 System.out.println(" ");
 		System.out.print("Masukkan Jumlah Steker \t\t: ");
@@ -36,12 +39,12 @@ public class SaranaTest extends IndukClass {
 		}
 		System.out.println(" ");
 	}
-	public void AnalisisKelistrikan(){
+	public double AnalisisKelistrikan(){
 		if(KondisiKelas2.getJumlahSteker() >=0){
 			System.out.print("Jumlah Steker "+KondisiKelas2.getJumlahSteker());
                         if(KondisiKelas2.getJumlahSteker() >=4){
                             System.out.println(" Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                             System.out.println();
                         }
@@ -50,7 +53,7 @@ public class SaranaTest extends IndukClass {
 			System.out.print("Kondisi Steker Baik "+Ksteker);
                         if(Ksteker == KondisiKelas2.getJumlahSteker()&& Ksteker >= 4){
                             System.out.println(" Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                             System.out.println("");
                         }
@@ -69,8 +72,9 @@ public class SaranaTest extends IndukClass {
                 }
                 if(PstekerP +PstekerD == KondisiKelas2.getJumlahSteker() && PstekerP + PstekerD >= 4 ){
                     System.out.println("Posisi Steker Sesuai");
-                    Sesuai++;
+                    SaranaRuang_Sesuai++;
                 }
+            return SaranaRuang_Sesuai;
 	}
 	
 	int KLCD = 0;
@@ -99,12 +103,12 @@ public class SaranaTest extends IndukClass {
 				}
 		}
 	}
-	public void AnalisisLCD(){
+	public double AnalisisLCD(){
 		if(KondisiKelas2.getJumlahKabelLCD() >=0){
 			System.out.print("Jumlah Kabel LCD = "+KondisiKelas2.getJumlahKabelLCD());
                         if(KondisiKelas2.getJumlahKabelLCD()>= 1){
                             System.out.println("sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                             System.out.println();
                         }
@@ -113,7 +117,7 @@ public class SaranaTest extends IndukClass {
 			System.out.print("Jumlah Kabel LCD Yang Berfungsi = "+KLCD );
                         if(KLCD == KondisiKelas2.getJumlahKabelLCD()&& KLCD >= 1){
                             System.out.println("Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                             System.out.println();
                         }       
@@ -122,11 +126,12 @@ public class SaranaTest extends IndukClass {
 			System.out.print("Posisi Kabel LCD Dekat Dosen = "+PLCDD );
                         if(PLCDD == KondisiKelas2.getJumlahKabelLCD()&& PLCDD >= 1){
                             System.out.println("Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                             System.out.println();
                         }
 		}
+            return SaranaRuang_Sesuai;
 	}
 	
 	int KLampu = 0;
@@ -153,12 +158,12 @@ public class SaranaTest extends IndukClass {
 				}
 		}
 	}
-	public void AnalisisLampu(){
+	public double AnalisisLampu(){
 		if(KondisiKelas2.getJumlahLampu() >=0){
 			System.out.print("Jumlah Lampu = "+KondisiKelas2.getJumlahLampu());
                         if(KondisiKelas2.getJumlahLampu() >=18){
                             System.out.println(" Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                         System.out.println();
                         }
@@ -167,7 +172,7 @@ public class SaranaTest extends IndukClass {
 			System.out.print("Jumlah Lampu Yang Berkondisi Baik = "+KLampu);
                         if(KLampu >=18){
                             System.out.println(" Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                         System.out.println();
                         }
@@ -176,11 +181,12 @@ public class SaranaTest extends IndukClass {
 			System.out.print("Lampu Berposisi Di Langit - Langit = "+PLampuL);
                         if (PLampuL == KondisiKelas2.getJumlahLampu()&& PLampuL >= 18 ){
                             System.out.println(" Sesuai");
-                            Sesuai++;
+                            SaranaRuang_Sesuai++;
                         }else{
                             System.out.println();
                         }
 		}
+            return SaranaRuang_Sesuai;
 	}
         
 	public void saranatest(){
