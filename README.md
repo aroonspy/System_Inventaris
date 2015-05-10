@@ -1,9 +1,10 @@
 Repository ini adalah Repository yang berisi Project Tugas Besar Sistem Inventaris Dari :                               
 
-  Teknik Informatika Kelas A                                                                                            
+  Teknik Informatika Kelas A                                                                                          
   
-Universitas Muhammadiyah Malang_________________________________________________________________________________________
-____Tahun 2014 / 2015___________________________________________________________________________________________________
+Universitas Muhammadiyah Malang
+......Tahun 2014 / 2015
+
 
 project ini di buat oleh :
 1. Basri Basren       201410370311030
