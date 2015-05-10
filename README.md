@@ -11,7 +11,7 @@ project ini di buat oleh :
 
 1. Basri Basren_______201410370311030
 
-2. Sundari____________201410370311022
+2. Sundari___________ 201410370311022
 
 3. Khopsawti Khotimah_201410370311025
 
