@@ -1,4 +1,5 @@
-Repository ini adalah Repository yang berisi Project Tugas Besar Sistem Inventaris Dari :_______________________________
+Repository ini adalah Repository yang berisi Project Tugas Besar Sistem Inventaris Dari :                               
+
 __Teknik Informatika Kelas A____________________________________________________________________________________________
 Universitas Muhammadiyah Malang_________________________________________________________________________________________
 ____Tahun 2014 / 2015___________________________________________________________________________________________________
