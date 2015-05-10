@@ -3,7 +3,7 @@ Repository ini adalah Repository yang berisi Project Tugas Besar Sistem Inventar
   Teknik Informatika Kelas A                                                                                          
   
 Universitas Muhammadiyah Malang
-......Tahun 2014 / 2015
+____Tahun 2014 / 2015
 
 
 project ini di buat oleh :
