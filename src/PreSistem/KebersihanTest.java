@@ -35,34 +35,35 @@ public class KebersihanTest extends IndukClass{
         }
         
         if(KebersihanKelas.getnilaiPencahayaan() >= 250 && KebersihanKelas.getnilaiPencahayaan() <=350){
-            System.out.println("Nilai Pencahayaan Ruangan = "+KebersihanKelas.getnilaiPencahayaan()+" Sesuai");
+            System.out.println("Nilai Pencahayaan Ruangan \t = "+KebersihanKelas.getnilaiPencahayaan()+" Sesuai");
             Kebersihan_Sesuai++;
         }else{
-            System.out.println("Nilai Pencahayaan Ruangan = "+KebersihanKelas.getnilaiPencahayaan());
+            System.out.println("Nilai Pencahayaan Ruangan \t = "+KebersihanKelas.getnilaiPencahayaan());
         }
         
         if(KebersihanKelas.getKelembapan() >= 70 && KebersihanKelas.getKelembapan()<= 80){
-            System.out.println("Nilai Kelembapan Ruangan = "+KebersihanKelas.getKelembapan()+" Sesuai");
+            System.out.println("Nilai Kelembapan Ruangan \t = "+KebersihanKelas.getKelembapan()+" Sesuai");
             Kebersihan_Sesuai++;
         }else{
-            System.out.println("Nilai Kelembapan Ruangan = "+KebersihanKelas.getKelembapan());
+            System.out.println("Nilai Kelembapan Ruangan \t = "+KebersihanKelas.getKelembapan());
         }
         
         if(KebersihanKelas.getsuhu() >= 25 && KebersihanKelas.getsuhu()<= 35){
-            System.out.println("Nilai Suhu Ruangan = "+KebersihanKelas.getsuhu()+" Sesuai");
+            System.out.println("Nilai Suhu Ruangan \t\t = "+KebersihanKelas.getsuhu()+" Sesuai");
             Kebersihan_Sesuai++;
         }else{
-            System.out.println("Nilai Suhu Ruangan = "+KebersihanKelas.getsuhu());
+            System.out.println("Nilai Suhu Ruangan \t\t = "+KebersihanKelas.getsuhu());
         }
         return Kebersihan_Sesuai;
     }
     
     public void Kebersihantest(){
-        inputKebersihan();
         System.out.println();
+        inputKebersihan();
         System.out.println("======================================================");
         AnalisisKebersihan();
         System.out.println("======================================================");
+        System.out.println();
     }
         
         

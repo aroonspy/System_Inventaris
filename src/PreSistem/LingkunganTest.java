@@ -26,35 +26,35 @@ public class LingkunganTest extends IndukClass{
     
     public double AnalisisKondisi(){
         if(LingkunganKelas.getKondisiLantai()== 1){
-            System.out.println("Kondisi Lantai ruangan Bersih Sesuai");
+            System.out.println("Kondisi Lantai ruangan Bersih \t Sesuai");
             Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiLantai()== 2){
             System.out.println("Kondisi Lantai ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiDinding()== 1){
-            System.out.println("Kondisi Dinding ruangan Bersih Sesuai");
+            System.out.println("Kondisi Dinding ruangan Bersih \t Sesuai");
             Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiDinding()== 2){
             System.out.println("Kondisi Dinding ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiAtap()== 1){
-            System.out.println("Kondisi Atap ruangan Bersih Sesuai");
+            System.out.println("Kondisi Atap ruangan Bersih \t Sesuai");
             Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiAtap()== 2){
             System.out.println("Kondisi Atap ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiPintu()== 1){
-            System.out.println("Kondisi Pintu ruangan Bersih Sesuai");
+            System.out.println("Kondisi Pintu ruangan Bersih \t Sesuai");
             Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiPintu()== 2){
             System.out.println("Kondisi Pintu ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiJendela()== 1){
-            System.out.println("Kondisi Jendela ruangan Bersih Sesuai");
+            System.out.println("Kondisi Jendela ruangan Bersih \t Sesuai");
             Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiJendela()== 2){
             System.out.println("Kondisi Jendela ruangan Tidak Bersih");
@@ -63,9 +63,11 @@ public class LingkunganTest extends IndukClass{
     }
     
     public void Lingkungan(){
+        System.out.println();
         inputLingkungan();
         System.out.println("====================================================");
         AnalisisKondisi();
         System.out.println("====================================================");
+        System.out.println();
     }
 }

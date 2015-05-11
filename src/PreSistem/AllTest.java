@@ -20,7 +20,7 @@ public class AllTest {
     public static double rata_rata;
     
     public static double Rata_rata(double Kondisi,double Sarana, double sarana2,double Lingkungan, double Kebersihan, double Kenyamanan, double Keamanan){
-        rata_rata = (Kondisi +Sarana +sarana2 +Lingkungan + Kebersihan + Kenyamanan + Keamanan)/21*100;
+        rata_rata = (Kondisi +Sarana +sarana2 +Lingkungan + Kebersihan + Kenyamanan + Keamanan)/40*100;
         System.out.println("Jumlah rata_rata Nilai Sesuai = " +rata_rata +" %");
         return rata_rata;
     }
@@ -34,6 +34,9 @@ public class AllTest {
        Kebersihan.Kebersihantest();
        Kenyamanan.Kenyamanantest();
        Keamanan.Keamanantest();
-       Rata_rata(Kondisi.KondisiRuang_Sesuai,Sarana1.SaranaRuang_Sesuai,Sarana2.SaranaRuang2_Sesuai,Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, Keamanan.Keamanan_Sesuai);      
+       Rata_rata(Kondisi.KondisiRuang_Sesuai,Sarana1.SaranaRuang_Sesuai,Sarana2.SaranaRuang2_Sesuai,
+               Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, 
+               Keamanan.Keamanan_Sesuai);
+       Keamanan.KeamananPilihan();
     }
 }

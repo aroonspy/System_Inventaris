@@ -28,19 +28,19 @@ public class KeamananTest extends IndukClass{
     
     public double AnalisisKeamanan(){
         if(KeamananRuang.getkekokohan() == 1){
-            System.out.println("Nilai Kekokohan = Kokoh Sesuai");
+            System.out.println("Nilai Kekokohan = Kokoh \t\t Sesuai");
             Keamanan_Sesuai++;
         }else if(KeamananRuang.getkekokohan() == 2){
             System.out.println("Nilai Kekokohan = Tidak Kokoh");
         }
         if(KeamananRuang.getkunci()== 1){
-            System.out.println("Nilai Kunci Pintu dan Jendela = Ada Sesuai");
+            System.out.println("Nilai Kunci Pintu dan Jendela = Ada \t Sesuai");
             Keamanan_Sesuai++;
         }else if(KeamananRuang.getkunci() == 2){
             System.out.println("Nilai Kunci Pintu dan Jendela = Tidak Ada");
         }
         if(KeamananRuang.getbahaya()== 1){
-            System.out.println("Nilai Kemanan = Aman Sesuai");
+            System.out.println("Nilai Kemanan = Aman \t\t\t Sesuai");
             Keamanan_Sesuai++;
         }else if(KeamananRuang.getbahaya()== 2){
             System.out.println("Nilai Kemanan = Tidak Aman");
@@ -49,11 +49,12 @@ public class KeamananTest extends IndukClass{
     }
     
     public void Keamanantest(){
+        System.out.println();
         inputKeamanan();
         System.out.println("======================================================");
         AnalisisKeamanan();
         System.out.println("======================================================");
-        KeamananPilihan();
+        System.out.println();
     }
         
     public void KeamananPilihan(){

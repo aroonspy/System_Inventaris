@@ -35,35 +35,35 @@ public class KenyamananTest extends IndukClass{
     
     public double AnalisisKenyamanan(){
         if(Kenyamanan.getKebisingan()== 1){
-            System.out.println("Kebisingan Di ruangan Tidak Bising Sesuai");
+            System.out.println("Kebisingan Di ruangan Tidak Bising \t Sesuai");
             Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKebisingan()== 2){
             System.out.println("Kebisingan Di ruangan Bising");
         }
         
         if(Kenyamanan.getBau()== 1){
-            System.out.println("Bau Di ruangan Tidak Bau Sesuai");
+            System.out.println("Bau Di ruangan Tidak Bau \t\t Sesuai");
             Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getBau()== 2){
             System.out.println("Bau Di ruangan Bau");
         }
         
         if(Kenyamanan.getKebocoran()== 1){
-            System.out.println("Kebocoran Di ruangan Tidak Bocor Sesuai");
+            System.out.println("Kebocoran Di ruangan Tidak Bocor \t Sesuai");
             Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKebocoran()== 2){
             System.out.println("Kebocoran Di ruangan Bocor");
         }
         
         if(Kenyamanan.getKerusakan()== 1){
-            System.out.println("Kerusakan Di ruangan Tidak Rusak Sesuai");
+            System.out.println("Kerusakan Di ruangan Tidak Rusak \t Sesuai");
             Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKerusakan()== 2){
             System.out.println("Kerusakan Di ruangan Rusak");
         }
         
         if(Kenyamanan.getKeausan()== 1){
-            System.out.println("Keausan Di ruangan Tidak aus Sesuai");
+            System.out.println("Keausan Di ruangan Tidak aus \t\t Sesuai");
             Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKeausan()== 2){
             System.out.println("Keausan Di ruangan aus");
@@ -72,9 +72,11 @@ public class KenyamananTest extends IndukClass{
     }
      
     public void Kenyamanantest(){
+        System.out.println();
         inputKenyamanan();
         System.out.println("=======================================================");
         AnalisisKenyamanan();
         System.out.println("=======================================================");
+        System.out.println();
     }
 }
