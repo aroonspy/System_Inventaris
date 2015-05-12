@@ -3,8 +3,10 @@
 // NIM  :201410370311025
 package PreSistem;
 
-public class IdentitasRuangkelastest extends IndukClass{
-    
+import java.util.Scanner;
+
+public class IdentitasRuangkelastest {
+    Scanner input = new Scanner(System.in);
     IdentitasRuangkelas  IDKelas = new IdentitasRuangkelas  ();
     private String lokasi;
     private String prodi;
