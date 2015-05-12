@@ -70,8 +70,9 @@ public class KenyamananTest extends IndukClass{
         }
         return Kenyamanan_Sesuai;
     }
-     
-    public void Kenyamanantest(){
+
+    @Override
+    public void Test() {
         System.out.println();
         inputKenyamanan();
         System.out.println("=======================================================");

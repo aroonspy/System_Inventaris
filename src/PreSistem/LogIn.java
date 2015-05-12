@@ -1,6 +1,8 @@
 package PreSistem;
 
-public class LogIn extends IndukClass{
+import java.util.Scanner;
+
+public class LogIn {
 private String A;
 private String B;
 private String Nama;
@@ -10,6 +12,7 @@ private String Nama2;
 private String Password2;
 private int Pilih;
 private int a = 1;
+Scanner input = new Scanner(System.in);
 
 private String SetNama (){
 	System.out.print("Masukkan Nama : ");

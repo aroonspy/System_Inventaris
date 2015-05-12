@@ -56,8 +56,9 @@ public class KebersihanTest extends IndukClass{
         }
         return Kebersihan_Sesuai;
     }
-    
-    public void Kebersihantest(){
+
+    @Override
+    public void Test() {
         System.out.println();
         inputKebersihan();
         System.out.println("======================================================");
@@ -65,6 +66,4 @@ public class KebersihanTest extends IndukClass{
         System.out.println("======================================================");
         System.out.println();
     }
-        
-        
 }

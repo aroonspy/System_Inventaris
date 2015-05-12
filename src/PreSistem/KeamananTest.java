@@ -48,15 +48,6 @@ public class KeamananTest extends IndukClass{
         return Keamanan_Sesuai;
     }
     
-    public void Keamanantest(){
-        System.out.println();
-        inputKeamanan();
-        System.out.println("======================================================");
-        AnalisisKeamanan();
-        System.out.println("======================================================");
-        System.out.println();
-    }
-        
     public void KeamananPilihan(){
         String edit;
        
@@ -65,7 +56,7 @@ public class KeamananTest extends IndukClass{
         switch (edit) {
             case "y":
                 System.out.println("silahkan Mengisi Ulang data");
-                Keamanantest();
+                Test();
                 break;
             case "n":
                 System.out.println("Terimakasih telah Menggunakan Software kami");
@@ -76,5 +67,15 @@ public class KeamananTest extends IndukClass{
                 break;
         }
             
+    }
+
+    @Override
+    public void Test() {
+        System.out.println();
+        inputKeamanan();
+        System.out.println("======================================================");
+        AnalisisKeamanan();
+        System.out.println("======================================================");
+        System.out.println();
     }
 }

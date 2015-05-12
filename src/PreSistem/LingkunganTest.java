@@ -5,6 +5,7 @@
 */
 package PreSistem;
 
+
 public class LingkunganTest extends IndukClass{
     LingkunganRuangKelas LingkunganKelas =new LingkunganRuangKelas();
     public double Lingkungan_Sesuai = 0.0;
@@ -61,8 +62,9 @@ public class LingkunganTest extends IndukClass{
         }
         return Lingkungan_Sesuai;
     }
-    
-    public void Lingkungan(){
+
+    @Override
+    public void Test() {
         System.out.println();
         inputLingkungan();
         System.out.println("====================================================");
