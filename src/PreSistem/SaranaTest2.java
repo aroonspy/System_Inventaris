@@ -4,10 +4,12 @@
 
 package PreSistem;
 
+import java.util.Scanner;
 
 
-public class SaranaTest2 extends IndukClass  {
 
+public class SaranaTest2  {
+        Scanner input = new Scanner(System.in);
 	SaranaRuangan2 KondisiKelas3 = new SaranaRuangan2();
 	int Kkipas = 0;
 	int PkipasL = 0;

@@ -3,9 +3,11 @@
 // Nim : 201410370311022
 package PreSistem;
 
+import java.util.Scanner;
 
-public class SaranaTest extends IndukClass {
-	
+
+public class SaranaTest {
+	Scanner input = new Scanner(System.in);
 	SaranaRuangan KondisiKelas2 = new SaranaRuangan();
         int Ksteker =0;
 	int PstekerD=0;
