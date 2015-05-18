@@ -6,7 +6,8 @@ package PreSistem;
 
 import java.util.Scanner;
 
-public class KondisiRuangtest {
+
+public class KondisiRuangtest extends IndukClass {
     
         KondisiRuang KondisiKelas = new KondisiRuang();
         public double KondisiRuang_Sesuai = 0.0;
@@ -72,12 +73,15 @@ public class KondisiRuangtest {
             return KondisiRuang_Sesuai;
     }
     
-    public   void kondisitest(){
-        kondisi();
+    
+
+    @Override
+    public void Test() {
+         kondisi();
         luas();
         System.out.println("===================================================");
         bentuk();
         analisis();
         System.out.println("===================================================");
-    }
+           }
 }
