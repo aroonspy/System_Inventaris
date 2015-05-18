@@ -18,7 +18,7 @@ public class IdentitasRuangkelastest {
         System.out.println("2. GKB 2");
         System.out.print("Masukkan lokasi ruangan ");
         IDKelas.setLokasiruang(input.nextInt());
-        if(IDKelas.getLokasiruang()==1){
+        if(IDKelas.getLokasiruang()==1){ 
             lokasi="GKB 1";
         }
             else if(IDKelas.getLokasiruang()==2){
