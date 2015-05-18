@@ -6,7 +6,7 @@ package PreSistem;
 import java.util.Scanner;
 
 
-public class SaranaTest {
+public class SaranaTest extends IndukClass{
 	Scanner input = new Scanner(System.in);
 	SaranaRuangan KondisiKelas2 = new SaranaRuangan();
         int Ksteker =0;
@@ -191,8 +191,11 @@ public class SaranaTest {
             return SaranaRuang_Sesuai;
 	}
         
-	public void saranatest(){
-		InputSteker();
+	
+
+    @Override
+    public void Test() {
+      InputSteker();
 		AnalisisKelistrikan();
 		
 		InputKabelLCD();
@@ -200,5 +203,5 @@ public class SaranaTest {
 		
 		InputLampu();
 		AnalisisLampu();
-	}
+    }
 }

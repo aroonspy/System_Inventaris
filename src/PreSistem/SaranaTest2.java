@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 
-public class SaranaTest2  {
+public class SaranaTest2 extends IndukClass  {
         Scanner input = new Scanner(System.in);
 	SaranaRuangan2 KondisiKelas3 = new SaranaRuangan2();
 	int Kkipas = 0;
@@ -220,8 +220,11 @@ public class SaranaTest2  {
             return SaranaRuang2_Sesuai;
 	}
 	
-	public void saranatest2(){
-		InputKipasAngin();
+	
+
+    @Override
+    public void Test() {
+        InputKipasAngin();
                 System.out.println("===================================================");
 		AnalisisKipasAngin();
 		System.out.println("===================================================");
@@ -238,5 +241,6 @@ public class SaranaTest2  {
                 System.out.println("===================================================");
 		AnalisisCCTV();
                 System.out.println("===================================================");
-	}
+       
+    }
 }

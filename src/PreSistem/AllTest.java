@@ -26,9 +26,13 @@ public class AllTest {
     public static void main(String[] args){
        //Login.Logintest();
        //Identitas.IDKelas();
-       Kondisi.kondisitest();
-       Sarana1.saranatest();
-       Sarana2.saranatest2();
+        IndukClass SaranaRuang = new SaranaTest();
+        SaranaRuang.Test();
+        IndukClass SaranaRuang2 = new SaranaTest2();
+        SaranaRuang2.Test();
+       //Kondisi.kondisitest();
+       //Sarana1.saranatest();
+       //Sarana2.saranatest2();
        /*
          Menggunakan Konsep Polimorfisme
          Polimorfisme adalah kemampuan sebuah class untuk memiliki banyak class turunan
