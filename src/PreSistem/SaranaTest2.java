@@ -149,7 +149,7 @@ public class SaranaTest2 extends IndukClass  {
 	}
 	public double AnalisisInternet(){
 		if(KondisiKelas3.getSSID() == 1){
-                    System.out.print("Pilihan SSID =  HotSpot UMM");
+                    System.out.println("Pilihan SSID =  HotSpot UMM");
                     SaranaRuang2_Sesuai++;
 		}
             return SaranaRuang2_Sesuai;

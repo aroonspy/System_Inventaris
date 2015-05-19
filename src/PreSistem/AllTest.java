@@ -26,25 +26,27 @@ public class AllTest {
     public static void main(String[] args){
        //Login.Logintest();
        //Identitas.IDKelas();
-       //Kondisi.kondisitest();
-       Sarana1.saranatest();
-       Sarana2.saranatest2();
-       IndukClass kondisi = new KondisiRuangtest();
-       kondisi.Test();
+       
        /*
          Menggunakan Konsep Polimorfisme
          Polimorfisme adalah kemampuan sebuah class untuk memiliki banyak class turunan
          Dalam Program Ini Class IndukClass Memiliki 4 class turunan 
        */
+       IndukClass kondisi = new KondisiRuangtest();
+       kondisi.Test();
+       IndukClass SaranaRuang = new SaranaTest ();
+       SaranaRuang.Test();
+       IndukClass SaranaRuang2 = new SaranaTest2();
+       SaranaRuang2.Test();
+       //IndukClass lingkungan = new LingkunganTest();
+       //lingkungan.Test();
+       //IndukClass kebersihan = new KebersihanTest();
+       //kebersihan.Test();
+       //IndukClass kenyamanan = new KenyamananTest();
+       //kenyamanan.Test();
+       //IndukClass keamanan = new KeamananTest();
+       //keamanan.Test();
        
-       IndukClass lingkungan = new LingkunganTest();
-       lingkungan.Test();
-       IndukClass kebersihan = new KebersihanTest();
-       kebersihan.Test();
-       IndukClass kenyamanan = new KenyamananTest();
-       kenyamanan.Test();
-       IndukClass keamanan = new KeamananTest();
-       keamanan.Test();
        Rata_rata(Kondisi.KondisiRuang_Sesuai,Sarana1.SaranaRuang_Sesuai,Sarana2.SaranaRuang2_Sesuai,
                Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, 
                Keamanan.Keamanan_Sesuai);

@@ -195,13 +195,13 @@ public class SaranaTest extends IndukClass{
 
     @Override
     public void Test() {
-      InputSteker();
-		AnalisisKelistrikan();
+        InputSteker();
+	AnalisisKelistrikan();
 		
-		InputKabelLCD();
-		AnalisisLCD();
+	InputKabelLCD();
+	AnalisisLCD();
 		
-		InputLampu();
-		AnalisisLampu();
+	InputLampu();
+	AnalisisLampu();
     }
 }
