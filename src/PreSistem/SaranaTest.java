@@ -3,17 +3,14 @@
 // Nim : 201410370311022
 package PreSistem;
 
-import java.util.Scanner;
-
 
 public class SaranaTest extends IndukClass{
-	Scanner input = new Scanner(System.in);
-	SaranaRuangan KondisiKelas2 = new SaranaRuangan();
-        int Ksteker =0;
-	int PstekerD=0;
-	int PstekerP=0;
-        public double SaranaRuang_Sesuai = 0.0;
-	public void InputSteker(){
+    SaranaRuangan KondisiKelas2 = new SaranaRuangan();
+    public static double SaranaRuang_Sesuai = 0.0;
+    int Ksteker =0;
+    int PstekerD=0;
+    int PstekerP=0;
+    public void InputSteker(){
                 System.out.println(" ");
 		System.out.print("Masukkan Jumlah Steker \t\t: ");
 		KondisiKelas2.setJumlahSteker(input.nextInt());
@@ -41,47 +38,10 @@ public class SaranaTest extends IndukClass{
 		}
 		System.out.println(" ");
 	}
-	public double AnalisisKelistrikan(){
-		if(KondisiKelas2.getJumlahSteker() >=0){
-			System.out.print("Jumlah Steker "+KondisiKelas2.getJumlahSteker());
-                        if(KondisiKelas2.getJumlahSteker() >=4){
-                            System.out.println(" Sesuai");
-                            SaranaRuang_Sesuai++;
-                        }else{
-                            System.out.println();
-                        }
-		}
-		if(Ksteker >= 0){
-			System.out.print("Kondisi Steker Baik "+Ksteker);
-                        if(Ksteker == KondisiKelas2.getJumlahSteker()&& Ksteker >= 4){
-                            System.out.println(" Sesuai");
-                            SaranaRuang_Sesuai++;
-                        }else{
-                            System.out.println("");
-                        }
-		}
-                if(PstekerD >= 0){
-			for(int c = 1 ;c<=PstekerD;c++ ){
-                            System.out.println("Posisi Steker ke "+c+" = "+"Dekat Dosen" );
-                        }
-		}
-                if(PstekerP >=0){
-			for(int a = 1 ;a<=PstekerP;a++ ){
-                            System.out.println("Posisi Steker ke "+a+" = "+"Pojok Ruang" );
-                        }
-		}else{
-                            System.out.println();
-                }
-                if(PstekerP +PstekerD == KondisiKelas2.getJumlahSteker() && PstekerP + PstekerD >= 4 ){
-                    System.out.println("Posisi Steker Sesuai");
-                    SaranaRuang_Sesuai++;
-                }
-            return SaranaRuang_Sesuai;
-	}
-	
-	int KLCD = 0;
-	int PLCDD = 0;
-	public void InputKabelLCD(){
+
+    int KLCD = 0;
+    int PLCDD = 0;
+    public void InputKabelLCD(){
 		System.out.println(" ");
 		System.out.print("Masukkan Jumlah Kabel LCD \t: ");
 		KondisiKelas2.setJumlahKabelLCD(input.nextInt());
@@ -93,7 +53,6 @@ public class SaranaTest extends IndukClass{
 			KondisiKelas2.setKondisiKabelLCD(input.nextInt());
 				if(KondisiKelas2.getKondisiKabelLCD() == 1){	
                                     KLCD++; //kondisi LCD baik ++
-                                    System.out.println();
 				}
                 }
                 System.out.println("1. Posisi Dekat Dosen");
@@ -105,40 +64,10 @@ public class SaranaTest extends IndukClass{
 				}
 		}
 	}
-	public double AnalisisLCD(){
-		if(KondisiKelas2.getJumlahKabelLCD() >=0){
-			System.out.print("Jumlah Kabel LCD = "+KondisiKelas2.getJumlahKabelLCD());
-                        if(KondisiKelas2.getJumlahKabelLCD()>= 1){
-                            System.out.println("sesuai");
-                            SaranaRuang_Sesuai++;
-                        }else{
-                            System.out.println();
-                        }
-		}
-		if(KLCD >= 0){
-			System.out.print("Jumlah Kabel LCD Yang Berfungsi = "+KLCD );
-                        if(KLCD == KondisiKelas2.getJumlahKabelLCD()&& KLCD >= 1){
-                            System.out.println("Sesuai");
-                            SaranaRuang_Sesuai++;
-                        }else{
-                            System.out.println();
-                        }       
-		}
-		if(PLCDD >= 0){
-			System.out.print("Posisi Kabel LCD Dekat Dosen = "+PLCDD );
-                        if(PLCDD == KondisiKelas2.getJumlahKabelLCD()&& PLCDD >= 1){
-                            System.out.println("Sesuai");
-                            SaranaRuang_Sesuai++;
-                        }else{
-                            System.out.println();
-                        }
-		}
-            return SaranaRuang_Sesuai;
-	}
-	
-	int KLampu = 0;
-	int PLampuL = 0;
-	public void InputLampu(){
+
+    int KLampu = 0;
+    int PLampuL = 0;
+    public void InputLampu(){
 		System.out.println(" ");
 		System.out.print("Masukkan Jumlah Lampu \t\t: ");
 		KondisiKelas2.setJumlahLampu(input.nextInt());
@@ -160,7 +89,7 @@ public class SaranaTest extends IndukClass{
 				}
 		}
 	}
-	public double AnalisisLampu(){
+    public double AnalisisLampu(){
 		if(KondisiKelas2.getJumlahLampu() >=0){
 			System.out.print("Jumlah Lampu = "+KondisiKelas2.getJumlahLampu());
                         if(KondisiKelas2.getJumlahLampu() >=18){
@@ -190,17 +119,23 @@ public class SaranaTest extends IndukClass{
 		}
             return SaranaRuang_Sesuai;
 	}
-        
-	
+  
+	 
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
         InputSteker();
-	AnalisisKelistrikan();
-		
+        System.out.println("===================== Output Steker ==============================");
+	KondisiKelas2.Analisis(4,KondisiKelas2.getJumlahSteker(),0.0,Ksteker,PstekerD,PstekerP);
+        System.out.println("==================================================================");
+	SaranaRuang_Sesuai = SaranaRuang_Sesuai+KondisiKelas2.getSaranaRuang_Sesuai();	
+        
 	InputKabelLCD();
-	AnalisisLCD();
-		
+        System.out.println("===================== Output LCD =================================");
+	KondisiKelas2.Analisis(1,KondisiKelas2.getJumlahKabelLCD(),0.0,KLCD,PLCDD);
+        System.out.println("==================================================================");
+        SaranaRuang_Sesuai = SaranaRuang_Sesuai + KondisiKelas2.getSaranaRuang_Sesuai();
+        
 	InputLampu();
 	AnalisisLampu();
     }

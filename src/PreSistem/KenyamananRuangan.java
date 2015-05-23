@@ -12,7 +12,7 @@ public class KenyamananRuangan {
     private int Kebocoran;
     private int Kerusakan;
     private int Keausan;
-    
+
     public void setKebisingan(int Kebisingan){
         this.Kebisingan = Kebisingan;
     }

@@ -4,17 +4,12 @@
 
 package PreSistem;
 
-import java.util.Scanner;
-
-
-
 public class SaranaTest2 extends IndukClass  {
-        Scanner input = new Scanner(System.in);
 	SaranaRuangan2 KondisiKelas3 = new SaranaRuangan2();
 	int Kkipas = 0;
 	int PkipasL = 0;
 	int PkipasS = 0;
-	public double SaranaRuang2_Sesuai = 0.0;
+	public static double SaranaRuang2_Sesuai = 0.0;
 	
 	public void InputKipasAngin(){
 		System.out.println(" ");
@@ -223,7 +218,7 @@ public class SaranaTest2 extends IndukClass  {
 	
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
         InputKipasAngin();
                 System.out.println("===================================================");
 		AnalisisKipasAngin();
@@ -241,6 +236,6 @@ public class SaranaTest2 extends IndukClass  {
                 System.out.println("===================================================");
 		AnalisisCCTV();
                 System.out.println("===================================================");
-       
+                
     }
 }

@@ -8,7 +8,7 @@ package PreSistem;
 
 public class KebersihanTest extends IndukClass{
     KebersihanRuangKelas KebersihanKelas = new KebersihanRuangKelas();
-    public double Kebersihan_Sesuai = 0.0;
+    public static double Kebersihan_Sesuai = 0.0;
     
     public void inputKebersihan(){
         System.out.println("1. Lancar");
@@ -58,7 +58,7 @@ public class KebersihanTest extends IndukClass{
     }
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
         System.out.println();
         inputKebersihan();
         System.out.println("======================================================");

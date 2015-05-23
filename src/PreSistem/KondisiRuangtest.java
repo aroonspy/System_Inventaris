@@ -4,14 +4,11 @@
 
 package PreSistem;
 
-import java.util.Scanner;
-
 
 public class KondisiRuangtest extends IndukClass {
     
         KondisiRuang KondisiKelas = new KondisiRuang();
-        public double KondisiRuang_Sesuai = 0.0;
-        Scanner input = new Scanner(System.in);
+        public static double KondisiRuang_Sesuai = 0.0;
         private String bentuk;
         private double Rasio;
         private String analisis;
@@ -76,7 +73,7 @@ public class KondisiRuangtest extends IndukClass {
     
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
          kondisi();
         luas();
         System.out.println("===================================================");
