@@ -10,8 +10,10 @@ public class SaranaRuangan {
 	private int JumlahLampu;
 	private int KondisiLampu;
 	private int PosisiLampu;
+        public double SaranaRuang_Sesuai = 0.0;
 	
-	int getJumlahSteker(){
+        
+        int getJumlahSteker(){
 		return JumlahSteker;
 	}
 	void setJumlahSteker(int JumlahSteker){
@@ -67,5 +69,86 @@ public class SaranaRuangan {
 	void setPosisiLampu(int PosisiLampu){
 		this.PosisiLampu = PosisiLampu;
 	}
+        
+        public double getSaranaRuang_Sesuai() {
+            return SaranaRuang_Sesuai;
+        }
+        public void setSaranaRuang_Sesuai(double SaranaRuang_Sesuai) {
+            this.SaranaRuang_Sesuai = SaranaRuang_Sesuai;
+        }
+        
 
+    public double Analisis(int JumlahMax, int JumlahAsli, double SaranaRuang_Sesuai, int Kondisi, int PosisiD, int PosisiP){
+	this.SaranaRuang_Sesuai = SaranaRuang_Sesuai;
+        if(JumlahAsli >= 0){
+            System.out.print("Jumlah "+JumlahAsli);
+            if(JumlahAsli >= JumlahMax){
+                System.out.println(" Sesuai");
+                this.SaranaRuang_Sesuai++;
+            }else{
+                System.out.println();
+            }
+        }
+        if(Kondisi >= 0){
+            System.out.print("Kondisi Baik "+Kondisi);
+                if(Kondisi == JumlahAsli && Kondisi >= JumlahMax){
+                    System.out.println(" Sesuai");
+                    this.SaranaRuang_Sesuai++;
+                }else{
+                    System.out.println("");
+                }
+	}
+        if(PosisiD >= 0){
+            for(int c = 1 ;c<=PosisiD;c++ ){
+                System.out.println("Posisi ke "+c+" = "+"Dekat Dosen" );
+            }
+	}
+        if(PosisiP >=0){
+            for(int a = 1 ;a<=PosisiP;a++ ){
+                System.out.println("Posisi ke "+a+" = "+"Pojok Ruang" );
+            }
+	}else{
+            System.out.println();
+        }
+        
+        if(PosisiP +PosisiD == JumlahAsli && PosisiP + PosisiD >= JumlahMax ){
+                    System.out.println("Posisi Sesuai");
+                    this.SaranaRuang_Sesuai++;
+        }
+        setSaranaRuang_Sesuai(this.SaranaRuang_Sesuai);
+        return 0;
+    }
+    public double Analisis(int JumlahMax, int JumlahAsli, double SaranaRuang_Sesuai, int Kondisi, int PosisiD){
+        this.SaranaRuang_Sesuai = SaranaRuang_Sesuai;
+        if(JumlahAsli >= 0){
+            System.out.print("Jumlah "+JumlahAsli);
+                if(JumlahAsli >= JumlahMax){
+                    System.out.println(" Sesuai");
+                    this.SaranaRuang_Sesuai++;
+                }else{
+                    System.out.println();
+                }
+        }
+        if(Kondisi >= 0){
+            System.out.print("Kondisi Baik "+Kondisi);
+                if(Kondisi == JumlahAsli && Kondisi >= JumlahMax){
+                    System.out.println(" Sesuai");
+                    this.SaranaRuang_Sesuai++;
+                }else{
+                    System.out.println("");
+                }
+	}
+        if(PosisiD >= 0){
+            System.out.print("Posisi Dekat Dosen = "+PosisiD );
+                if(PosisiD == JumlahAsli && PosisiD >= 1){
+                    System.out.println("Sesuai");
+                    this.SaranaRuang_Sesuai++;
+                }else{
+                     System.out.println();
+                }
+	}
+        setSaranaRuang_Sesuai(this.SaranaRuang_Sesuai);
+        return 0;
+    }
+    
 }
