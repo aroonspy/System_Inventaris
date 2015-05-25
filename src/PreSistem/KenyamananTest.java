@@ -8,7 +8,7 @@ package PreSistem;
 
 public class KenyamananTest extends IndukClass{
     KenyamananRuangan Kenyamanan = new KenyamananRuangan();
-    public double Kenyamanan_Sesuai = 0.0;
+    public static double Kenyamanan_Sesuai = 0.0;
     
     public void inputKenyamanan(){
         System.out.println("1. Tidak Bising");
@@ -72,7 +72,7 @@ public class KenyamananTest extends IndukClass{
     }
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
         System.out.println();
         inputKenyamanan();
         System.out.println("=======================================================");

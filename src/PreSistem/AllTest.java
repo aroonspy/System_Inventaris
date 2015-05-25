@@ -30,26 +30,26 @@ public class AllTest {
        /*
          Menggunakan Konsep Polimorfisme
          Polimorfisme adalah kemampuan sebuah class untuk memiliki banyak class turunan
-         Dalam Program Ini Class IndukClass Memiliki 4 class turunan 
+         Dalam Program Ini Class IndukClass Memiliki 7 class turunan 
        */
-       IndukClass kondisi = new KondisiRuangtest();
-       kondisi.Test();
+       //IndukClass kondisi = new KondisiRuangtest();
+       //kondisi.Pemanggilan();
        IndukClass SaranaRuang = new SaranaTest ();
-       SaranaRuang.Test();
-       IndukClass SaranaRuang2 = new SaranaTest2();
-       SaranaRuang2.Test();
+       SaranaRuang.Pemanggilan();
+       //IndukClass SaranaRuang2 = new SaranaTest2();
+       //SaranaRuang2.Pemanggilan();
        //IndukClass lingkungan = new LingkunganTest();
-       //lingkungan.Test();
+       //lingkungan.Pemanggilan();
        //IndukClass kebersihan = new KebersihanTest();
-       //kebersihan.Test();
+       //kebersihan.Pemanggilan();
        //IndukClass kenyamanan = new KenyamananTest();
-       //kenyamanan.Test();
+       //kenyamanan.Pemanggilan();
        //IndukClass keamanan = new KeamananTest();
-       //keamanan.Test();
+       //keamanan.Pemanggilan();
        
-       Rata_rata(Kondisi.KondisiRuang_Sesuai,Sarana1.SaranaRuang_Sesuai,Sarana2.SaranaRuang2_Sesuai,
-               Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, 
-               Keamanan.Keamanan_Sesuai);
+       //Rata_rata(Kondisi.KondisiRuang_Sesuai,Sarana1.SaranaRuang_Sesuai,Sarana2.SaranaRuang2_Sesuai,
+              // Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, 
+              // Keamanan.Keamanan_Sesuai);
        Keamanan.KeamananPilihan();
     }
 }

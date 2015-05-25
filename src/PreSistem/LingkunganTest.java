@@ -8,7 +8,7 @@ package PreSistem;
 
 public class LingkunganTest extends IndukClass{
     LingkunganRuangKelas LingkunganKelas =new LingkunganRuangKelas();
-    public double Lingkungan_Sesuai = 0.0;
+    public static double Lingkungan_Sesuai = 0.0;
 
     public void inputLingkungan(){
         System.out.println("1. Kondisi Bersih");
@@ -64,7 +64,7 @@ public class LingkunganTest extends IndukClass{
     }
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
         System.out.println();
         inputLingkungan();
         System.out.println("====================================================");

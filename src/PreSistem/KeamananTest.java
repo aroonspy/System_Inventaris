@@ -8,7 +8,7 @@ package PreSistem;
 
 public class KeamananTest extends IndukClass{
     KeamananRuangKelas KeamananRuang = new KeamananRuangKelas();
-    public double Keamanan_Sesuai = 0.0; 
+    public static double Keamanan_Sesuai = 0.0; 
     
     public void inputKeamanan(){ 
         System.out.println("1. Kokoh");
@@ -56,7 +56,7 @@ public class KeamananTest extends IndukClass{
         switch (edit) {
             case "y":
                 System.out.println("silahkan Mengisi Ulang data");
-                Test();
+                Pemanggilan();
                 break;
             case "n":
                 System.out.println("Terimakasih telah Menggunakan Software kami");
@@ -70,7 +70,7 @@ public class KeamananTest extends IndukClass{
     }
 
     @Override
-    public void Test() {
+    public void Pemanggilan() {
         System.out.println();
         inputKeamanan();
         System.out.println("======================================================");
