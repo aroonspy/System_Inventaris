@@ -137,6 +137,8 @@ public class SaranaTest extends IndukClass{
         SaranaRuang_Sesuai = SaranaRuang_Sesuai + KondisiKelas2.getSaranaRuang_Sesuai();
         
 	InputLampu();
+        System.out.println("===================== Output Lampu ===============================");
 	AnalisisLampu();
+        System.out.println("==================================================================");
     }
 }
