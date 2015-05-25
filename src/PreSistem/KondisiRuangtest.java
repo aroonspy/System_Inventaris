@@ -5,7 +5,7 @@
 package PreSistem;
 
 
-public class KondisiRuangtest extends IndukClass {
+public class KondisiRuangtest extends IndukClass implements ClassInterface{
     
         KondisiRuang KondisiKelas = new KondisiRuang();
         public static double KondisiRuang_Sesuai = 0.0;
@@ -25,9 +25,11 @@ public class KondisiRuangtest extends IndukClass {
            System.out.print("Masukkan jumlah jendela = ");
            KondisiKelas.setJumlahjendela(input.nextInt());
     }   
+    @Override
     public   int luas(){
         return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
     }
+    @Override
     public double bentuk(){
         if(KondisiKelas.getPanjang()!=luas()){
             System.out.println("Bentuk Ruangan Persegi Panjang sesuai");
