@@ -68,4 +68,16 @@ public class SaranaRuangan {
 		this.PosisiLampu = PosisiLampu;
 	}
 
+    void Analisis(int i, int jumlahSteker, double d, int Ksteker, int PstekerD, int PstekerP) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double getSaranaRuang_Sesuai() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void Analisis(int i, int jumlahKabelLCD, double d, int KLCD, int PLCDD) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
