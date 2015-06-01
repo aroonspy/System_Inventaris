@@ -5,6 +5,9 @@
 */
 package PreSistem;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class LingkunganTest extends IndukClass{
     LingkunganRuangKelas LingkunganKelas =new LingkunganRuangKelas();
@@ -63,6 +66,19 @@ public class LingkunganTest extends IndukClass{
         return Lingkungan_Sesuai;
     }
 
+    public void Save(){
+        try{
+           FileWriter Writer = new FileWriter("Lingkungan.txt");
+           Writer.write("Kondisi Lantai Ruangan = " + LingkunganKelas.getKondisiLantai()+"\t");
+           Writer.write("Kondisi Dinding Ruangan = " + LingkunganKelas.getKondisiDinding()+"\t");
+           Writer.write("Kondisi Atap Ruangan= " + LingkunganKelas.getKondisiAtap()+"\t");
+           Writer.write("Kondisi Pintu Ruangan= " + LingkunganKelas.getKondisiPintu()+"\t");
+           Writer.write("Kondisi Jendela Ruangan= " + LingkunganKelas.getKondisiJendela()+"\t");
+           Writer.close();
+         }catch(IOException ex){
+             ex.printStackTrace();
+         }
+    }
     @Override
     public void Pemanggilan() {
         System.out.println();
@@ -71,5 +87,6 @@ public class LingkunganTest extends IndukClass{
         AnalisisKondisi();
         System.out.println("====================================================");
         System.out.println();
+        Save();
     }
 }

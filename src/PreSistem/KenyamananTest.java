@@ -5,6 +5,9 @@
 */
 package PreSistem;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class KenyamananTest extends IndukClass{
     KenyamananRuangan Kenyamanan = new KenyamananRuangan();
@@ -71,6 +74,19 @@ public class KenyamananTest extends IndukClass{
         return Kenyamanan_Sesuai;
     }
 
+    public void Save(){
+        try{
+           FileWriter Writer = new FileWriter("Kenyamanan.txt");
+           Writer.write("Kebisingan Ruangan = " + Kenyamanan.getKebisingan()+"\t");
+           Writer.write("Bau Ruangan = " + Kenyamanan.getBau()+"\t");
+           Writer.write("Kebocoran Ruangan= " + Kenyamanan.getKebocoran()+"\t");
+           Writer.write("Kerusakan Ruangan= " + Kenyamanan.getKerusakan()+"\t");
+           Writer.write("Keausan Ruangan= " + Kenyamanan.getKeausan()+"\t");
+           Writer.close();
+         }catch(IOException ex){
+             ex.printStackTrace();
+         }
+    }
     @Override
     public void Pemanggilan() {
         System.out.println();
@@ -79,5 +95,6 @@ public class KenyamananTest extends IndukClass{
         AnalisisKenyamanan();
         System.out.println("=======================================================");
         System.out.println();
+        Save();
     }
 }

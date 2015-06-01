@@ -6,6 +6,9 @@
 
 package PreSistem;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class KeamananTest extends IndukClass{
     KeamananRuangKelas KeamananRuang = new KeamananRuangKelas();
     public static double Keamanan_Sesuai = 0.0; 
@@ -48,6 +51,18 @@ public class KeamananTest extends IndukClass{
         return Keamanan_Sesuai;
     }
     
+    public void Save(){
+        try{
+           FileWriter Writer = new FileWriter("Keamanan.txt");
+           Writer.write("Kekokohan Ruangan = " + KeamananRuang.getkekokohan()+"\t");
+           Writer.write("Kunci Pintu dan Jendela = " + KeamananRuang.getkunci()+"\t");
+           Writer.write("Keamanan Ruangan= " + KeamananRuang.getbahaya()+"\t");
+           Writer.close();
+         }catch(IOException ex){
+             ex.printStackTrace();
+         }
+    }
+    
     public void KeamananPilihan(){
         String edit;
        
@@ -77,5 +92,6 @@ public class KeamananTest extends IndukClass{
         AnalisisKeamanan();
         System.out.println("======================================================");
         System.out.println();
+        Save();
     }
 }

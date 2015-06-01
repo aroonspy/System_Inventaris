@@ -5,6 +5,9 @@
 */
 package PreSistem;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class KebersihanTest extends IndukClass{
     KebersihanRuangKelas KebersihanKelas = new KebersihanRuangKelas();
@@ -57,6 +60,18 @@ public class KebersihanTest extends IndukClass{
         return Kebersihan_Sesuai;
     }
 
+    public void Save(){
+        try{
+           FileWriter Writer = new FileWriter("Kebersihan.txt");
+           Writer.write("Sirkulasi Udara Ruangan = " + KebersihanKelas.getSirkulasiUdara()+"\t");
+           Writer.write("Pencahayaan Ruangan = " + KebersihanKelas.getnilaiPencahayaan()+"\t");
+           Writer.write("Kelembapan Ruangan= " + KebersihanKelas.getKelembapan()+"\t");
+           Writer.write("Suhu Ruangan= " + KebersihanKelas.getsuhu()+"\t");
+           Writer.close();
+         }catch(IOException ex){
+             ex.printStackTrace();
+         }
+    }
     @Override
     public void Pemanggilan() {
         System.out.println();
@@ -65,5 +80,6 @@ public class KebersihanTest extends IndukClass{
         AnalisisKebersihan();
         System.out.println("======================================================");
         System.out.println();
+        Save();
     }
 }
