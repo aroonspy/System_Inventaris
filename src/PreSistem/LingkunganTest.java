@@ -13,7 +13,8 @@ public class LingkunganTest extends IndukClass{
     LingkunganRuangKelas LingkunganKelas =new LingkunganRuangKelas();
     public static double Lingkungan_Sesuai = 0.0;
 
-    public void inputLingkungan(){
+    @Override
+    public void Input() {
         System.out.println("1. Kondisi Bersih");
         System.out.println("2. Kondisi Tidak Bersih");
         System.out.print("Masukkan Kondisi Lantai = ");
@@ -27,45 +28,65 @@ public class LingkunganTest extends IndukClass{
         System.out.print("Masukkan Kondisi Jendela = ");
         LingkunganKelas.setKondisiJendela(input.nextInt());
     }
-    
-    public double AnalisisKondisi(){
+
+    @Override
+    public double Analisis() {
+        if(LingkunganKelas.getKondisiLantai()== 1){
+            Lingkungan_Sesuai++;
+        }
+        
+        if(LingkunganKelas.getKondisiDinding()== 1){
+            Lingkungan_Sesuai++;
+        }
+        
+        if(LingkunganKelas.getKondisiAtap()== 1){
+            Lingkungan_Sesuai++;
+        }
+        
+        if(LingkunganKelas.getKondisiPintu()== 1){
+            Lingkungan_Sesuai++;
+        }
+        
+        if(LingkunganKelas.getKondisiJendela()== 1){
+            Lingkungan_Sesuai++;
+        }
+        return Lingkungan_Sesuai;
+    }
+
+    @Override
+    public void Tampil(){
         if(LingkunganKelas.getKondisiLantai()== 1){
             System.out.println("Kondisi Lantai ruangan Bersih \t Sesuai");
-            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiLantai()== 2){
             System.out.println("Kondisi Lantai ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiDinding()== 1){
             System.out.println("Kondisi Dinding ruangan Bersih \t Sesuai");
-            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiDinding()== 2){
             System.out.println("Kondisi Dinding ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiAtap()== 1){
             System.out.println("Kondisi Atap ruangan Bersih \t Sesuai");
-            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiAtap()== 2){
             System.out.println("Kondisi Atap ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiPintu()== 1){
             System.out.println("Kondisi Pintu ruangan Bersih \t Sesuai");
-            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiPintu()== 2){
             System.out.println("Kondisi Pintu ruangan Tidak Bersih");
         }
         
         if(LingkunganKelas.getKondisiJendela()== 1){
             System.out.println("Kondisi Jendela ruangan Bersih \t Sesuai");
-            Lingkungan_Sesuai++;
         }else if(LingkunganKelas.getKondisiJendela()== 2){
             System.out.println("Kondisi Jendela ruangan Tidak Bersih");
         }
-        return Lingkungan_Sesuai;
     }
-
+    
+    @Override
     public void Save(){
         try{
            FileWriter Writer = new FileWriter("Lingkungan.txt");
@@ -79,14 +100,17 @@ public class LingkunganTest extends IndukClass{
              ex.printStackTrace();
          }
     }
+    
     @Override
     public void Pemanggilan() {
         System.out.println();
-        inputLingkungan();
+        Input();
+        Analisis();
         System.out.println("====================================================");
-        AnalisisKondisi();
+        Tampil();
         System.out.println("====================================================");
         System.out.println();
         Save();
     }
+
 }

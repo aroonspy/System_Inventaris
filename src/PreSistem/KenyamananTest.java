@@ -12,8 +12,9 @@ import java.io.IOException;
 public class KenyamananTest extends IndukClass{
     KenyamananRuangan Kenyamanan = new KenyamananRuangan();
     public static double Kenyamanan_Sesuai = 0.0;
-    
-    public void inputKenyamanan(){
+
+    @Override
+    public void Input() {
         System.out.println("1. Tidak Bising");
         System.out.println("2. Bising");
         System.out.print("Masukkan Nilai Kebisingan = ");
@@ -35,45 +36,61 @@ public class KenyamananTest extends IndukClass{
         System.out.print("Masukkan Nilai Keausan = ");
         Kenyamanan.setKeausan(input.nextInt());
     }
+
+    @Override
+    public double Analisis() {
+         if(Kenyamanan.getKebisingan()== 1){
+            Kenyamanan_Sesuai++;
+        }
+        if(Kenyamanan.getBau()== 1){
+            Kenyamanan_Sesuai++;
+        }
+        if(Kenyamanan.getKebocoran()== 1){
+            Kenyamanan_Sesuai++;
+        }
+        if(Kenyamanan.getKerusakan()== 1){
+            Kenyamanan_Sesuai++;
+        }
+        if(Kenyamanan.getKeausan()== 1){
+            Kenyamanan_Sesuai++;
+        }
+        return Kenyamanan_Sesuai;
+    }
     
-    public double AnalisisKenyamanan(){
+    @Override
+    public void Tampil(){
         if(Kenyamanan.getKebisingan()== 1){
             System.out.println("Kebisingan Di ruangan Tidak Bising \t Sesuai");
-            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKebisingan()== 2){
             System.out.println("Kebisingan Di ruangan Bising");
         }
         
         if(Kenyamanan.getBau()== 1){
             System.out.println("Bau Di ruangan Tidak Bau \t\t Sesuai");
-            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getBau()== 2){
             System.out.println("Bau Di ruangan Bau");
         }
         
         if(Kenyamanan.getKebocoran()== 1){
             System.out.println("Kebocoran Di ruangan Tidak Bocor \t Sesuai");
-            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKebocoran()== 2){
             System.out.println("Kebocoran Di ruangan Bocor");
         }
         
         if(Kenyamanan.getKerusakan()== 1){
             System.out.println("Kerusakan Di ruangan Tidak Rusak \t Sesuai");
-            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKerusakan()== 2){
             System.out.println("Kerusakan Di ruangan Rusak");
         }
         
         if(Kenyamanan.getKeausan()== 1){
             System.out.println("Keausan Di ruangan Tidak aus \t\t Sesuai");
-            Kenyamanan_Sesuai++;
         }else if(Kenyamanan.getKeausan()== 2){
             System.out.println("Keausan Di ruangan aus");
         }
-        return Kenyamanan_Sesuai;
     }
-
+    
+    @Override
     public void Save(){
         try{
            FileWriter Writer = new FileWriter("Kenyamanan.txt");
@@ -87,14 +104,17 @@ public class KenyamananTest extends IndukClass{
              ex.printStackTrace();
          }
     }
+    
     @Override
     public void Pemanggilan() {
         System.out.println();
-        inputKenyamanan();
-        System.out.println("=======================================================");
-        AnalisisKenyamanan();
+        Input();
+        Analisis();
+        System.out.println("=============== Output Kenyamanan Ruang ===============");
+        Tampil();
         System.out.println("=======================================================");
         System.out.println();
         Save();
     }
+
 }

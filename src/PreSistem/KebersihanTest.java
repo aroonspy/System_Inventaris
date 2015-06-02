@@ -13,7 +13,8 @@ public class KebersihanTest extends IndukClass{
     KebersihanRuangKelas KebersihanKelas = new KebersihanRuangKelas();
     public static double Kebersihan_Sesuai = 0.0;
     
-    public void inputKebersihan(){
+    @Override
+    public void Input() {
         System.out.println("1. Lancar");
         System.out.println("2. Tidak Lancar");
         System.out.print("Masukkan Kondisi Sirkulasi Udara = ");
@@ -29,37 +30,51 @@ public class KebersihanTest extends IndukClass{
         KebersihanKelas.setsuhu(input.nextInt());
     }
     
-    public double AnalisisKebersihan(){
+    @Override
+    public double Analisis(){
+        if(KebersihanKelas.getSirkulasiUdara() == 1){
+            Kebersihan_Sesuai++;
+        }
+        if(KebersihanKelas.getnilaiPencahayaan() >= 250 && KebersihanKelas.getnilaiPencahayaan() <=350){
+            Kebersihan_Sesuai++;
+        }
+        if(KebersihanKelas.getKelembapan() >= 70 && KebersihanKelas.getKelembapan()<= 80){
+            Kebersihan_Sesuai++;
+        }
+        if(KebersihanKelas.getsuhu() >= 25 && KebersihanKelas.getsuhu()<= 35){
+            Kebersihan_Sesuai++;
+        }
+        return Kebersihan_Sesuai;
+    }
+    
+    @Override
+    public void Tampil(){
         if(KebersihanKelas.getSirkulasiUdara() == 1){
             System.out.println("Sirkulasi Udara Di ruangan Lancar Sesuai");
-            Kebersihan_Sesuai++;
         }else if(KebersihanKelas.getSirkulasiUdara() == 2){
             System.out.println("Sirkulasi Udara Di ruangan Tidak Lancar");
         }
         
         if(KebersihanKelas.getnilaiPencahayaan() >= 250 && KebersihanKelas.getnilaiPencahayaan() <=350){
             System.out.println("Nilai Pencahayaan Ruangan \t = "+KebersihanKelas.getnilaiPencahayaan()+" Sesuai");
-            Kebersihan_Sesuai++;
         }else{
             System.out.println("Nilai Pencahayaan Ruangan \t = "+KebersihanKelas.getnilaiPencahayaan());
         }
         
         if(KebersihanKelas.getKelembapan() >= 70 && KebersihanKelas.getKelembapan()<= 80){
             System.out.println("Nilai Kelembapan Ruangan \t = "+KebersihanKelas.getKelembapan()+" Sesuai");
-            Kebersihan_Sesuai++;
         }else{
             System.out.println("Nilai Kelembapan Ruangan \t = "+KebersihanKelas.getKelembapan());
         }
         
         if(KebersihanKelas.getsuhu() >= 25 && KebersihanKelas.getsuhu()<= 35){
             System.out.println("Nilai Suhu Ruangan \t\t = "+KebersihanKelas.getsuhu()+" Sesuai");
-            Kebersihan_Sesuai++;
         }else{
             System.out.println("Nilai Suhu Ruangan \t\t = "+KebersihanKelas.getsuhu());
         }
-        return Kebersihan_Sesuai;
     }
-
+    
+    @Override
     public void Save(){
         try{
            FileWriter Writer = new FileWriter("Kebersihan.txt");
@@ -72,14 +87,18 @@ public class KebersihanTest extends IndukClass{
              ex.printStackTrace();
          }
     }
+    
     @Override
     public void Pemanggilan() {
         System.out.println();
-        inputKebersihan();
-        System.out.println("======================================================");
-        AnalisisKebersihan();
+        Input();
+        Analisis();
+        System.out.println("============== Output Kebersihan Ruang ===============");
+        Tampil();
         System.out.println("======================================================");
         System.out.println();
         Save();
     }
+
+    
 }

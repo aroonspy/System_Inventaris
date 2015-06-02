@@ -13,7 +13,8 @@ public class KeamananTest extends IndukClass{
     KeamananRuangKelas KeamananRuang = new KeamananRuangKelas();
     public static double Keamanan_Sesuai = 0.0; 
     
-    public void inputKeamanan(){ 
+    @Override
+    public void Input(){ 
         System.out.println("1. Kokoh");
         System.out.println("2. Tidak Kokoh");
         System.out.print("Masukkan Nilai Kekokohan = ");
@@ -25,32 +26,43 @@ public class KeamananTest extends IndukClass{
         System.out.println("1. Aman");
         System.out.println("2. Tidak Aman");
         System.out.print("Masukkan Nilai Keamanan Ruangan = ");
-        KeamananRuang.setbahaya(input.nextInt());
-        
+        KeamananRuang.setbahaya(input.nextInt());   
     }
     
-    public double AnalisisKeamanan(){
+    @Override
+    public double Analisis(){
+        if(KeamananRuang.getkekokohan() == 1){
+            Keamanan_Sesuai++;
+        }
+        if(KeamananRuang.getkunci()== 1){
+            Keamanan_Sesuai++;
+        }
+        if(KeamananRuang.getbahaya()== 1){
+            Keamanan_Sesuai++;
+        }
+        return Keamanan_Sesuai;
+    }
+    
+    @Override
+    public void Tampil(){
         if(KeamananRuang.getkekokohan() == 1){
             System.out.println("Nilai Kekokohan = Kokoh \t\t Sesuai");
-            Keamanan_Sesuai++;
         }else if(KeamananRuang.getkekokohan() == 2){
             System.out.println("Nilai Kekokohan = Tidak Kokoh");
         }
         if(KeamananRuang.getkunci()== 1){
             System.out.println("Nilai Kunci Pintu dan Jendela = Ada \t Sesuai");
-            Keamanan_Sesuai++;
         }else if(KeamananRuang.getkunci() == 2){
             System.out.println("Nilai Kunci Pintu dan Jendela = Tidak Ada");
         }
         if(KeamananRuang.getbahaya()== 1){
             System.out.println("Nilai Kemanan = Aman \t\t\t Sesuai");
-            Keamanan_Sesuai++;
         }else if(KeamananRuang.getbahaya()== 2){
             System.out.println("Nilai Kemanan = Tidak Aman");
         }
-        return Keamanan_Sesuai;
     }
     
+    @Override
     public void Save(){
         try{
            FileWriter Writer = new FileWriter("Keamanan.txt");
@@ -87,9 +99,10 @@ public class KeamananTest extends IndukClass{
     @Override
     public void Pemanggilan() {
         System.out.println();
-        inputKeamanan();
-        System.out.println("======================================================");
-        AnalisisKeamanan();
+        Input();
+        Analisis();
+        System.out.println("================ Output Keamanan Ruang ===============");
+        Tampil();
         System.out.println("======================================================");
         System.out.println();
         Save();

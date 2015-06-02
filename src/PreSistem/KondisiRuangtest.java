@@ -4,6 +4,8 @@
 
 package PreSistem;
 
+import java.io.FileWriter;
+
 
 public class KondisiRuangtest extends IndukClass implements ClassInterface{
     
@@ -12,75 +14,96 @@ public class KondisiRuangtest extends IndukClass implements ClassInterface{
         private String bentuk;
         private double Rasio;
         private String analisis;
-  
-    public  void kondisi(){
-           System.out.print("Masukkan Panjang Ruangan = ");
-           KondisiKelas.setPanjang(input.nextInt());
-           System.out.print("Masukkan Lebar Ruangan = ");
-           KondisiKelas.setLebar(input.nextInt());
-           System.out.print("Masukkan jumlah kursi = ");
-           KondisiKelas.setJumlahkursi(input.nextInt());
-           System.out.print("Masukkan jumlah pintu = ");
-           KondisiKelas.setJumlahpintu(input.nextInt());
-           System.out.print("Masukkan jumlah jendela = ");
-           KondisiKelas.setJumlahjendela(input.nextInt());
-    }   
     @Override
-    public   int luas(){
+    public void Input() {
+        System.out.print("Masukkan Panjang Ruangan = ");
+        KondisiKelas.setPanjang(input.nextInt());
+        System.out.print("Masukkan Lebar Ruangan = ");
+        KondisiKelas.setLebar(input.nextInt());
+        System.out.print("Masukkan jumlah kursi = ");
+        KondisiKelas.setJumlahkursi(input.nextInt());
+        System.out.print("Masukkan jumlah pintu = ");
+        KondisiKelas.setJumlahpintu(input.nextInt());
+        System.out.print("Masukkan jumlah jendela = ");
+        KondisiKelas.setJumlahjendela(input.nextInt());    
+    }
+
+    @Override
+    public int luas(){
         return KondisiKelas.getPanjang()*KondisiKelas.getLebar();
     }
+    
     @Override
-    public double bentuk(){
+    public String bentuk(){
         if(KondisiKelas.getPanjang()!=luas()){
-            System.out.println("Bentuk Ruangan Persegi Panjang sesuai");
-           KondisiRuang_Sesuai ++;
+           bentuk = "Persegi Panjang";
         }else{
-            System.out.println("Bentuk Ruangan Tidak Persegi Panjang");
+            bentuk = "Bukan Persegi panjang";
         }
-            return KondisiRuang_Sesuai;
+        return bentuk;
     }
-    
-    public double analisis(){   
+
+    public double rasio() {
         Rasio = luas()/ KondisiKelas.getJumlahkursi();
-        if (Rasio >= 0){
-            System.out.print("Rasio ruangan = "+Rasio);
-            if(Rasio >= 0.5){
-                System.out.println(" Sesuai");
-                KondisiRuang_Sesuai++;
-            }else{
-                System.out.println();
-           }
-        }
-        if(KondisiKelas.getJumlahpintu()>= 0){
-            System.out.print("jumlah pintu "+KondisiKelas.getJumlahpintu());
-            if(KondisiKelas.getJumlahpintu()>=2){
-                System.out.println(" Sesuai"); 
-                KondisiRuang_Sesuai++;
-            }else{
-                System.out.println();
-            }   
-        }
-        if(KondisiKelas.getJumlahjendela()>=0){
-            System.out.print("jumlah jendela "+KondisiKelas.getJumlahjendela());
-            if(KondisiKelas.getJumlahjendela()>=1){
-                System.out.println(" Sesuai");
-                KondisiRuang_Sesuai ++;      
-            }else{
-                System.out.println();
-            }
-        }
-            return KondisiRuang_Sesuai;
+        return Rasio;
     }
     
-    
+    @Override
+    public double Analisis() {
+        if(KondisiKelas.getPanjang()!=luas()){
+           KondisiRuang_Sesuai ++;
+        }
+        if(Rasio >= 0.5){
+            KondisiRuang_Sesuai++;
+        }
+        if(KondisiKelas.getJumlahpintu()>=2){ 
+            KondisiRuang_Sesuai++; 
+        }
+        if(KondisiKelas.getJumlahjendela()>=1){
+            KondisiRuang_Sesuai ++;
+        }
+        return KondisiRuang_Sesuai;   
+    }
+
+    @Override
+    public void Tampil() {
+        System.out.println("Luas ruangan = "+luas());
+        System.out.println("Rasio ruangan = "+Rasio);
+        System.out.println("Bentuk ruangan = "+bentuk);
+        System.out.println("jumlah Kursi "+KondisiKelas.getJumlahkursi());
+        System.out.println("jumlah pintu "+KondisiKelas.getJumlahpintu());
+        System.out.println("jumlah jendela "+KondisiKelas.getJumlahjendela());
+    }
+
+    @Override
+    public void Save() {
+        try{
+            FileWriter Writer = new FileWriter("Kondisi.txt");
+            Writer.write("Panjang Ruangan ="+KondisiKelas.getPanjang());
+            Writer.write("Lebar Ruangan ="+KondisiKelas.getLebar());
+            Writer.write("jumlah kursi ="+KondisiKelas.getJumlahkursi());
+            Writer.write("Jumlah Pintu ="+KondisiKelas.getJumlahpintu());
+            Writer.write("Jumlah Jendela ="+KondisiKelas.getJumlahjendela());
+            Writer.write("luas"+luas());
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
 
     @Override
     public void Pemanggilan() {
-         kondisi();
+        Input();
         luas();
-        System.out.println("===================================================");
         bentuk();
-        analisis();
-        System.out.println("===================================================");
-           }
+        rasio();
+        Analisis();
+        System.out.println("================ Output Kondisi Ruang ===============");
+        Tampil();
+        Save();
+        System.out.println("=====================================================");
+    }  
+
+    public double Sesuai() {
+        return KondisiRuang_Sesuai/4;
+    }
 }

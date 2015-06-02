@@ -34,8 +34,8 @@ public class AllTest {
        */
        //IndukClass kondisi = new KondisiRuangtest();
        //kondisi.Pemanggilan();
-       IndukClass SaranaRuang = new SaranaTest ();
-       SaranaRuang.Pemanggilan();
+       //IndukClass SaranaRuang = new SaranaTest ();
+       //SaranaRuang.Pemanggilan();
        //IndukClass SaranaRuang2 = new SaranaTest2();
        //SaranaRuang2.Pemanggilan();
        //IndukClass lingkungan = new LingkunganTest();
