@@ -1,1 +1,1 @@
-Kekokohan Ruangan = Kokoh	Kunci Pintu dan Jendela = Ada	Keamanan Ruangan= Tidak Aman	
+Kekokohan Ruangan = Kokoh	Kunci Pintu dan Jendela = Ada	Keamanan Ruangan= Aman	

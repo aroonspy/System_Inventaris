@@ -1,1 +1,1 @@
-Kebisingan Ruangan = Tidak Bising	Bau Ruangan = Tidak Bau	Kebocoran Ruangan= Bocor	Kerusakan Ruangan= Tidak Rusak	Keausan Ruangan= Tidak Aus	
+Kebisingan Ruangan = Tidak Bising	Bau Ruangan = Tidak Bau	Kebocoran Ruangan= Tidak Bocor	Kerusakan Ruangan= Tidak Rusak	Keausan Ruangan= Tidak Aus	

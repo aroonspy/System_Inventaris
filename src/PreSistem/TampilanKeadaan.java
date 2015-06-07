@@ -15,7 +15,9 @@ public class TampilanKeadaan extends javax.swing.JFrame {
     KenyamananTest Kenyamanan = new KenyamananTest();
     LingkunganRuangKelas SetLingkungan = new LingkunganRuangKelas();
     LingkunganTest Lingkungan = new LingkunganTest();
+    TotalRata Total = new TotalRata();
     double Rata_rataSesuai; 
+    
     
     public TampilanKeadaan() {
         initComponents();
@@ -143,11 +145,11 @@ public class TampilanKeadaan extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Sirkulasi Udara", "Pencahayaan", "Kelembapan", "Suhu", "Kekokohan Ruang", "Kunci Pintu dan Jendela", "Keamanan Ruang", "Rata -Rata Sesuai"
+                "Sirkulasi Udara", "Pencahayaan", "Kelembapan", "Suhu", "Kekokohan Ruang", "Kunci Pintu dan Jendela", "Keamanan Ruang", "Rata -Rata Sesuai", "Total Rata -Rata"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -732,6 +734,9 @@ public class TampilanKeadaan extends javax.swing.JFrame {
         Lingkungan.Sesuai();
         System.out.println(Lingkungan.Lingkungan_Sesuai);
         
+        Total.Rata();
+        Total.Save();
+        
         Rata_rataSesuai = Keamanan.Keamanan_Sesuai + Kebersihan.Kebersihan_Sesuai + Kenyamanan.Kenyamanan_Sesuai+Lingkungan.Lingkungan_Sesuai;
         DefaultTableModel modelKebersihan = (DefaultTableModel) TableKebersihan.getModel();
         modelKebersihan.addRow(new Object[]{SetLingkungan.getKondisiLantai(), SetLingkungan.getKondisiDinding(), SetLingkungan.getKondisiAtap(),
@@ -744,7 +749,7 @@ public class TampilanKeadaan extends javax.swing.JFrame {
         DefaultTableModel modelKeamanan = (DefaultTableModel) TableKeamanan.getModel();
         modelKeamanan.addRow(new Object[]{SetKebersihan.getSirkulasiUdara(), SetKebersihan.getNilaiPencahayaan(),
                 SetKebersihan.getKelembapan(), SetKebersihan.getSuhu(),SetKeamanan.getKekokohan(), 
-                SetKeamanan.getKunci(), SetKeamanan.getBahaya(), Rata_rataSesuai});
+                SetKeamanan.getKunci(), SetKeamanan.getBahaya(), Rata_rataSesuai, Total.rata_rata});
         
         Tabel.setVisible(true);
         Keadaan.setVisible(false);

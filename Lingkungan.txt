@@ -1,1 +1,1 @@
-Kondisi Lantai Ruangan = Bersih	Kondisi Dinding Ruangan = Bersih	Kondisi Atap Ruangan = Bersih	Kondisi Pintu Ruangan = Kotor	Kondisi Jendela Ruangan = Bersih	
+Kondisi Lantai Ruangan = Bersih	Kondisi Dinding Ruangan = Bersih	Kondisi Atap Ruangan = Bersih	Kondisi Pintu Ruangan = Bersih	Kondisi Jendela Ruangan = Bersih	
