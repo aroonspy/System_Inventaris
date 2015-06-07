@@ -66,11 +66,11 @@ public class TampilanIdentitas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama Ruangan", "Lokasi Ruangan", "Program Studi", "Panjang Ruang", "Lebar Ruang", "Jumlah Kursi", "Jumlah Pintu", "Jumlah Jendela", "Luas Ruang", "Rasio Ruang", "Bentuk Ruang"
+                "Nama Ruangan", "Lokasi Ruangan", "Program Studi", "Panjang Ruang", "Lebar Ruang", "Jumlah Kursi", "Jumlah Pintu", "Jumlah Jendela", "Luas Ruang", "Rasio Ruang", "Bentuk Ruang", "Rata - Rata Sesuai"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true, true, true, true, true, true
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -225,16 +225,17 @@ public class TampilanIdentitas extends javax.swing.JFrame {
 
             Kondisi.Analisis();
             Kondisi.Sesuai();
-            System.out.println(Kondisi.KondisiRuang_Sesuai);
-            System.out.println(SetID.getNamaruang());
-            System.out.println(SetID.getLokasiruang());
-            System.out.println(SetID.getProgramstudi());
+            //System.out.println(Kondisi.KondisiRuang_Sesuai);
+            //System.out.println(SetID.getNamaruang());
+            //System.out.println(SetID.getLokasiruang());
+            //System.out.println(SetID.getProgramstudi());
             
             
             DefaultTableModel modelID = (DefaultTableModel) TableIdentitas.getModel();
             modelID.addRow(new Object[]{SetID.getNamaruang(),SetID.getLokasiruang(),SetID.getProgramstudi(),
                 SetKondisi.getPanjang(),SetKondisi.getLebar(),SetKondisi.getJumlahkursi(),
-                SetKondisi.getJumlahpintu(),SetKondisi.getJumlahjendela(),Kondisi.Luas,Kondisi.Rasio,Kondisi.bentuk});
+                SetKondisi.getJumlahpintu(),SetKondisi.getJumlahjendela(),Kondisi.Luas,Kondisi.Rasio,Kondisi.bentuk,
+            Kondisi.KondisiRuang_Sesuai});
             
             Tabel.setVisible(true);
             TombolIdentitas.setVisible(true);

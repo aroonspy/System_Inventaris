@@ -1,1 +1,1 @@
-Kekokohan Ruangan = null	Kunci Pintu dan Jendela = null	Keamanan Ruangan= null	
+Kekokohan Ruangan = Kokoh	Kunci Pintu dan Jendela = Ada	Keamanan Ruangan= Tidak Aman	

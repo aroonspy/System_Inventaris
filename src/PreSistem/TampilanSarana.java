@@ -79,11 +79,11 @@ public class TampilanSarana extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Jumlah Kabel Lampu", "Kondisi Kabel Lampu Baik", "Kondisi Kabel Lampu Rusak", "Posisi Kabel Lampu"
+                "Jumlah Kabel Lampu", "Kondisi Kabel Lampu Baik", "Kondisi Kabel Lampu Rusak", "Posisi Kabel Lampu", "Rata - Rata Sesuai"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -113,7 +113,7 @@ public class TampilanSarana extends javax.swing.JFrame {
         });
         TabelSteker.setViewportView(TableSteker);
 
-        Tabel.add(TabelSteker, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 164, 1310, 460));
+        Tabel.add(TabelSteker, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 164, 1310, 290));
 
         getContentPane().add(Tabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -391,7 +391,7 @@ public class TampilanSarana extends javax.swing.JFrame {
         
         DefaultTableModel modelLampu = (DefaultTableModel) TableLampu.getModel();
         modelLampu.addRow(new Object[]{SetSarana.getJumlahSteker(),SetSarana.getKondisiSteker(),SetSarana.getKondisiStekerR(),
-            SetSarana.getPosisiStekerDD()});
+            SetSarana.getPosisiStekerDD(),SaranaTest.SaranaRuang_Sesuai});
         Tabel.setVisible(true);
         Sarana.setVisible(false);
         TombolSarana.setVisible(true);

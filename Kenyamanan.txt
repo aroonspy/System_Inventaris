@@ -1,1 +1,1 @@
-Kebisingan Ruangan = null	Bau Ruangan = null	Kebocoran Ruangan= null	Kerusakan Ruangan= null	Keausan Ruangan= null	
+Kebisingan Ruangan = Tidak Bising	Bau Ruangan = Tidak Bau	Kebocoran Ruangan= Bocor	Kerusakan Ruangan= Tidak Rusak	Keausan Ruangan= Tidak Aus	

@@ -127,11 +127,11 @@ public class TampilanSarana2 extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Jumlah Kipas Angin", "Kondisi Kipas Angin Baik", "Kondisi Kipas Angin Rusak", "Posisi Kipas Angin Di Atap Ruangan", "SSID", "Bandwith"
+                "Jumlah Kipas Angin", "Kondisi Kipas Angin Baik", "Kondisi Kipas Angin Rusak", "Posisi Kipas Angin Di Atap Ruangan", "SSID", "Bandwith", "Rata - Rata Sesuai"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -459,7 +459,8 @@ public class TampilanSarana2 extends javax.swing.JFrame {
         
         DefaultTableModel modelKA = (DefaultTableModel) TableKipas.getModel();
         modelKA.addRow(new Object[]{SetSarana2.getJumlahKipasAngin(), SetSarana2.getKondisiKipasAngin(), 
-            SetSarana2.getKondisiKipasAnginBuruk(), SetSarana2.getPosisiKipasAngin(),SetSarana2.getSSID(),SetSarana2.getBandwith()});
+            SetSarana2.getKondisiKipasAnginBuruk(), SetSarana2.getPosisiKipasAngin(),SetSarana2.getSSID(),SetSarana2.getBandwith(),
+        Sarana2.SaranaRuang2_Sesuai});
         
         Tabel.setVisible(true);
         Sarana_2.setVisible(false);

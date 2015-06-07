@@ -1,1 +1,1 @@
-Sirkulasi Udara Ruangan = null	Pencahayaan Ruangan = 250	Kelembapan Ruangan= 70	Suhu Ruangan= 25	
+Sirkulasi Udara Ruangan = Lancar	Pencahayaan Ruangan = 250	Kelembapan Ruangan= 70	Suhu Ruangan= 25	
