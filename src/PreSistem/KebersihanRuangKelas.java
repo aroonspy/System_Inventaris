@@ -7,36 +7,41 @@ package PreSistem;
 
 
 public class KebersihanRuangKelas {
-    private int SirkulasiUdara;
+    private String SirkulasiUdara;
     private int nilaiPencahayaan;
     private int Kelembapan;
     private int suhu;
-    
-    public void setSirkulasiUdara(int SirkulasiUdara){
-        this.SirkulasiUdara = SirkulasiUdara;
-    }
-    public int getSirkulasiUdara(){
+
+    public String getSirkulasiUdara() {
         return SirkulasiUdara;
     }
-    
-    public void setnilaiPencahayaan(int nilaiPencahayaan){
-        this.nilaiPencahayaan = nilaiPencahayaan;
+
+    public void setSirkulasiUdara(String SirkulasiUdara) {
+        this.SirkulasiUdara = SirkulasiUdara;
     }
-    public int getnilaiPencahayaan(){
+
+    public int getNilaiPencahayaan() {
         return nilaiPencahayaan;
     }
-    
-    public void setKelembapan(int Kelembapan){
-        this.Kelembapan = Kelembapan;
+
+    public void setNilaiPencahayaan(int nilaiPencahayaan) {
+        this.nilaiPencahayaan = nilaiPencahayaan;
     }
-    public int getKelembapan(){
+
+    public int getKelembapan() {
         return Kelembapan;
     }
-    
-    public void setsuhu(int suhu){
-        this.suhu = suhu;
+
+    public void setKelembapan(int Kelembapan) {
+        this.Kelembapan = Kelembapan;
     }
-    public int getsuhu(){
+
+    public int getSuhu() {
         return suhu;
     }
+
+    public void setSuhu(int suhu) {
+        this.suhu = suhu;
+    }
+
 }

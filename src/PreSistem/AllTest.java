@@ -50,6 +50,6 @@ public class AllTest {
        //Rata_rata(Kondisi.KondisiRuang_Sesuai,Sarana1.SaranaRuang_Sesuai,Sarana2.SaranaRuang2_Sesuai,
               // Lingkungan.Lingkungan_Sesuai, Kebersihan.Kebersihan_Sesuai, Kenyamanan.Kenyamanan_Sesuai, 
               // Keamanan.Keamanan_Sesuai);
-       Keamanan.KeamananPilihan();
+       //Keamanan.KeamananPilihan();
     }
 }

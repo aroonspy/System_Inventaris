@@ -7,28 +7,32 @@ package PreSistem;
 
 
 public class KeamananRuangKelas {
-    private int kekokohan;
-    private int kunci;
-    private int bahaya;
-    
-    public void setkekokohan(int kekokohan){
+    private String kekokohan;
+    private String kunci;
+    private String bahaya;
+
+    public String getKekokohan() {
+        return kekokohan;
+    }
+
+    public void setKekokohan(String kekokohan) {
         this.kekokohan = kekokohan;
     }
-    public int getkekokohan(){
-        return kekokohan; 
-    }
-    
-    public void setkunci(int kunci){
-        this.kunci = kunci;
-    }
-    public int getkunci(){
+
+    public String getKunci() {
         return kunci;
     }
-    
-    public void setbahaya(int bahaya){
-        this.bahaya = bahaya;
+
+    public void setKunci(String kunci) {
+        this.kunci = kunci;
     }
-    public int getbahaya(){
+
+    public String getBahaya() {
         return bahaya;
     }
+
+    public void setBahaya(String bahaya) {
+        this.bahaya = bahaya;
+    }
+
 }

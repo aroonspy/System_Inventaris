@@ -7,44 +7,51 @@ package PreSistem;
 
 
 public class LingkunganRuangKelas {
-   private int KondisiLantai;
-   private int KondisiDinding;
-   private int KondisiAtap;
-   private int KondisiPintu;
-   private int KondisiJendela;
+   private String KondisiLantai;
+   private String KondisiDinding;
+   private String KondisiAtap;
+   private String KondisiPintu;
+   private String KondisiJendela;
+
+    public String getKondisiLantai() {
+        return KondisiLantai;
+    }
+
+    public void setKondisiLantai(String KondisiLantai) {
+        this.KondisiLantai = KondisiLantai;
+    }
+
+    public String getKondisiDinding() {
+        return KondisiDinding;
+    }
+
+    public void setKondisiDinding(String KondisiDinding) {
+        this.KondisiDinding = KondisiDinding;
+    }
+
+    public String getKondisiAtap() {
+        return KondisiAtap;
+    }
+
+    public void setKondisiAtap(String KondisiAtap) {
+        this.KondisiAtap = KondisiAtap;
+    }
+
+    public String getKondisiPintu() {
+        return KondisiPintu;
+    }
+
+    public void setKondisiPintu(String KondisiPintu) {
+        this.KondisiPintu = KondisiPintu;
+    }
+
+    public String getKondisiJendela() {
+        return KondisiJendela;
+    }
+
+    public void setKondisiJendela(String KondisiJendela) {
+        this.KondisiJendela = KondisiJendela;
+    }
    
-   	public int getKondisiLantai(){
-		return KondisiLantai;
-	}
-	public void setKondisiLantai(int KondisiLantai){
-		this.KondisiLantai = KondisiLantai;
-	}
-        
-        public int getKondisiDinding(){
-		return KondisiDinding;
-	}
-	public void setKondisiDinding(int KondisiDinding){
-		this.KondisiDinding = KondisiDinding;
-	}
-        
-        public int getKondisiAtap(){
-		return KondisiAtap;
-	}
-	public void setKondisiAtap(int KondisiAtap){
-		this.KondisiAtap = KondisiAtap;
-	}
-        
-        public int getKondisiPintu(){
-		return KondisiPintu;
-	}
-	public void setKondisiPintu(int KondisiPintu){
-		this.KondisiPintu = KondisiPintu;
-	}
-        
-        public int getKondisiJendela(){
-		return KondisiJendela;
-	}
-	public void setKondisiJendela(int KondisiJendela){
-		this.KondisiJendela = KondisiJendela;
-	}
+
 }

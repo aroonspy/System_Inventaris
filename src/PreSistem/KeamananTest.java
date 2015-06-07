@@ -12,99 +12,58 @@ import java.io.IOException;
 public class KeamananTest extends IndukClass{
     KeamananRuangKelas KeamananRuang = new KeamananRuangKelas();
     public static double Keamanan_Sesuai = 0.0; 
+    public String Kekokohan, Kunci, Bahaya;
     
-    @Override
-    public void Input(){ 
-        System.out.println("1. Kokoh");
-        System.out.println("2. Tidak Kokoh");
-        System.out.print("Masukkan Nilai Kekokohan = ");
-        KeamananRuang.setkekokohan(input.nextInt());
-        System.out.println("1. Ada");
-        System.out.println("2. Tidak Ada");
-        System.out.print("Masukkan Nilai Kunci Pintu dan Jendela = ");
-        KeamananRuang.setkunci(input.nextInt());
-        System.out.println("1. Aman");
-        System.out.println("2. Tidak Aman");
-        System.out.print("Masukkan Nilai Keamanan Ruangan = ");
-        KeamananRuang.setbahaya(input.nextInt());   
+    public void Input(String Kekokohan, String Kunci, String Bahaya){ 
+        this.Kekokohan = Kekokohan;
+        this.Kunci = Kunci;
+        this.Bahaya = Bahaya;
     }
     
-    @Override
     public double Analisis(){
-        if(KeamananRuang.getkekokohan() == 1){
-            Keamanan_Sesuai++;
+        try{
+            switch (Kekokohan) {
+                case "Kokoh":
+                    Keamanan_Sesuai++;
+                    break;
+                case "Tidak Kokoh":
+                    break;
+            }
+            switch (Kunci) {
+                case "Ada":
+                    Keamanan_Sesuai++;
+                    break;
+                case "Tidak Ada":
+                    break;
+            }
+            switch (Bahaya) {
+                case "Aman":
+                    Keamanan_Sesuai++;
+                    break;
+                case "Tidak Aman":
+                    break;
+            }
+        }catch(Exception e){
+            System.out.println("ERROR");
         }
-        if(KeamananRuang.getkunci()== 1){
-            Keamanan_Sesuai++;
-        }
-        if(KeamananRuang.getbahaya()== 1){
-            Keamanan_Sesuai++;
-        }
-        return Keamanan_Sesuai;
+        return Keamanan_Sesuai/3;
     }
     
     @Override
-    public void Tampil(){
-        if(KeamananRuang.getkekokohan() == 1){
-            System.out.println("Nilai Kekokohan = Kokoh \t\t Sesuai");
-        }else if(KeamananRuang.getkekokohan() == 2){
-            System.out.println("Nilai Kekokohan = Tidak Kokoh");
-        }
-        if(KeamananRuang.getkunci()== 1){
-            System.out.println("Nilai Kunci Pintu dan Jendela = Ada \t Sesuai");
-        }else if(KeamananRuang.getkunci() == 2){
-            System.out.println("Nilai Kunci Pintu dan Jendela = Tidak Ada");
-        }
-        if(KeamananRuang.getbahaya()== 1){
-            System.out.println("Nilai Kemanan = Aman \t\t\t Sesuai");
-        }else if(KeamananRuang.getbahaya()== 2){
-            System.out.println("Nilai Kemanan = Tidak Aman");
-        }
-    }
-    
+    public double Sesuai() {
+        return Keamanan_Sesuai/3;
+    } 
+
     @Override
-    public void Save(){
+    public void Save() {
         try{
            FileWriter Writer = new FileWriter("Keamanan.txt");
-           Writer.write("Kekokohan Ruangan = " + KeamananRuang.getkekokohan()+"\t");
-           Writer.write("Kunci Pintu dan Jendela = " + KeamananRuang.getkunci()+"\t");
-           Writer.write("Keamanan Ruangan= " + KeamananRuang.getbahaya()+"\t");
+           Writer.write("Kekokohan Ruangan = " + this.Kekokohan+"\t");
+           Writer.write("Kunci Pintu dan Jendela = " + this.Kunci+"\t");
+           Writer.write("Keamanan Ruangan= " + this.Bahaya+"\t");
            Writer.close();
          }catch(IOException ex){
              ex.printStackTrace();
          }
-    }
-    
-    public void KeamananPilihan(){
-        String edit;
-       
-        System.out.print("Apakah Anda Ingin Mengedit data (y/n) = ");
-        edit = input.next();
-        switch (edit) {
-            case "y":
-                System.out.println("silahkan Mengisi Ulang data");
-                Pemanggilan();
-                break;
-            case "n":
-                System.out.println("Terimakasih telah Menggunakan Software kami");
-                break;
-            default:
-                System.out.println("Anda Salah Memasukkan Inputan tekan y untuk Yes dan n untuk No");
-                KeamananPilihan();
-                break;
-        }
-            
-    }
-
-    @Override
-    public void Pemanggilan() {
-        System.out.println();
-        Input();
-        Analisis();
-        System.out.println("================ Output Keamanan Ruang ===============");
-        Tampil();
-        System.out.println("======================================================");
-        System.out.println();
-        Save();
     }
 }

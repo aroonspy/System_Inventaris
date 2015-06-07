@@ -7,46 +7,50 @@ package PreSistem;
 
 
 public class KenyamananRuangan {
-    private int Kebisingan;
-    private int Bau;
-    private int Kebocoran;
-    private int Kerusakan;
-    private int Keausan;
+    private String Kebisingan;
+    private String Bau;
+    private String Kebocoran;
+    private String Kerusakan;
+    private String Keausan;
 
-    public void setKebisingan(int Kebisingan){
-        this.Kebisingan = Kebisingan;
-    }
-    public int getKebisingan (){
+    public String getKebisingan() {
         return Kebisingan;
     }
-    
-    public void setBau(int Bau){
-        this.Bau = Bau;
+
+    public void setKebisingan(String Kebisingan) {
+        this.Kebisingan = Kebisingan;
     }
-    public int getBau (){
+
+    public String getBau() {
         return Bau;
     }
-    
-    public void setKebocoran(int Kebocoran){
-        this.Kebocoran = Kebocoran;
+
+    public void setBau(String Bau) {
+        this.Bau = Bau;
     }
-    public int getKebocoran (){
+
+    public String getKebocoran() {
         return Kebocoran;
     }
-    
-    public void setKerusakan(int Kerusakan){
-        this.Kerusakan = Kerusakan;
+
+    public void setKebocoran(String Kebocoran) {
+        this.Kebocoran = Kebocoran;
     }
-    public int getKerusakan (){
+
+    public String getKerusakan() {
         return Kerusakan;
     }
-    
-    public void setKeausan(int Keausan){
-        this.Keausan = Keausan;
+
+    public void setKerusakan(String Kerusakan) {
+        this.Kerusakan = Kerusakan;
     }
-    public int getKeausan (){
+
+    public String getKeausan() {
         return Keausan;
     }
-    
+
+    public void setKeausan(String Keausan) {
+        this.Keausan = Keausan;
+    }
 
 }
