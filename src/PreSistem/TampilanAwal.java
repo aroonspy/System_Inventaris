@@ -6,6 +6,7 @@ public class TampilanAwal extends javax.swing.JFrame {
     
     TampilanIdentitas TID = new TampilanIdentitas();
     TampilanLihatData LData = new TampilanLihatData();
+    TampilanKalender Kalender = new TampilanKalender();
     boolean menu = true;
     public TampilanAwal() {
         initComponents();
@@ -351,7 +352,9 @@ public class TampilanAwal extends javax.swing.JFrame {
     
     
     private void TanggalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TanggalActionPerformed
-        // TODO add your handling code here:
+        Kalender.Kalender();
+        Menu.setVisible(false);
+        TombolMenu.setVisible(true);
     }//GEN-LAST:event_TanggalActionPerformed
 
     private void InputDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputDataActionPerformed
@@ -392,7 +395,7 @@ public class TampilanAwal extends javax.swing.JFrame {
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
-
+         
     public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
