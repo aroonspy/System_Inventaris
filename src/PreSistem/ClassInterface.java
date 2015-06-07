@@ -3,6 +3,7 @@ package PreSistem;
 
 
 public interface ClassInterface {
-    public int luas();
+    public double luas();
     public String bentuk();
+    public double rasio();
 }
