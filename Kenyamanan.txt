@@ -1,0 +1,1 @@
+Kebisingan Ruangan = null	Bau Ruangan = null	Kebocoran Ruangan= null	Kerusakan Ruangan= null	Keausan Ruangan= null	

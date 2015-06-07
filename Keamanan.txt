@@ -1,0 +1,1 @@
+Kekokohan Ruangan = null	Kunci Pintu dan Jendela = null	Keamanan Ruangan= null	

@@ -1,0 +1,1 @@
+Kondisi Lantai Ruangan = null	Kondisi Dinding Ruangan = null	Kondisi Atap Ruangan = null	Kondisi Pintu Ruangan = null	Kondisi Jendela Ruangan = null	
