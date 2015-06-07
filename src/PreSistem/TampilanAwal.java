@@ -1,5 +1,8 @@
 package PreSistem;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 
 public class TampilanAwal extends javax.swing.JFrame {
 
@@ -8,11 +11,34 @@ public class TampilanAwal extends javax.swing.JFrame {
     TampilanLihatData LData = new TampilanLihatData();
     TampilanKalender Kalender = new TampilanKalender();
     boolean menu = true;
+    int TimeRun = 0;
+    
     public TampilanAwal() {
         initComponents();
+        new Thread(){
+            public void run(){
+                while(TimeRun == 0){
+                    Calendar cal = new GregorianCalendar();
+                    int hour = cal.get(Calendar.HOUR);
+                    int min = cal.get(Calendar.MINUTE);
+                    int sec = cal.get(Calendar.SECOND);
+                    int AM_PM = cal.get(Calendar.AM_PM);
+                    
+                    String hari = "";
+                    if(AM_PM == 1){
+                        hari = "PM";
+                    }else{
+                        hari = "AM";
+                    }
+                    String time = hour +":"+min+":"+sec+" "+hari;
+                    Jam.setText(time);
+                }
+            }
+        }.start();
         Menu.setVisible(false);
         Profil.setVisible(false);
         SetAkun.setVisible(false);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -33,6 +59,7 @@ public class TampilanAwal extends javax.swing.JFrame {
         LoginButton = new javax.swing.JButton();
         CreatAkun = new javax.swing.JButton();
         BackgroundLogin = new javax.swing.JLabel();
+        Jam = new javax.swing.JLabel();
         SetAkun = new javax.swing.JPanel();
         SetUsername = new javax.swing.JTextField();
         SetPassword = new javax.swing.JPasswordField();
@@ -156,6 +183,11 @@ public class TampilanAwal extends javax.swing.JFrame {
         BackgroundLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         BackgroundLogin.setOpaque(true);
         Login.add(BackgroundLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1350, 591));
+
+        Jam.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        Jam.setForeground(new java.awt.Color(0, 165, 255));
+        Jam.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Login.add(Jam, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 0, 220, 40));
 
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 720));
 
@@ -440,6 +472,7 @@ public class TampilanAwal extends javax.swing.JFrame {
     private javax.swing.JButton CreatAkunButton;
     private javax.swing.JButton Exit;
     private javax.swing.JButton InputData;
+    private javax.swing.JLabel Jam;
     private javax.swing.JButton LihatData;
     private javax.swing.JPanel Login;
     private javax.swing.JButton LoginButton;
