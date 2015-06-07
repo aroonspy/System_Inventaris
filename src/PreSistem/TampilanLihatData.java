@@ -19,6 +19,7 @@ public class TampilanLihatData extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Home = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
         TabelSarana = new javax.swing.JPanel();
         TabelLCD = new javax.swing.JScrollPane();
@@ -56,6 +57,14 @@ public class TampilanLihatData extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Home.setText("HOME");
+        Home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 70, 130, 60));
 
         Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Exit.png"))); // NOI18N
         Exit.setContentAreaFilled(false);
@@ -434,6 +443,10 @@ public class TampilanLihatData extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_RIDActionPerformed
 
+    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_HomeActionPerformed
+
     public void Data() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -465,6 +478,7 @@ public class TampilanLihatData extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Backround1;
     private javax.swing.JButton Exit;
+    private javax.swing.JButton Home;
     private javax.swing.JRadioButton RID;
     private javax.swing.JRadioButton RKeadaan;
     private javax.swing.JRadioButton RSarana;
