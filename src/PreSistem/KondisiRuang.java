@@ -7,25 +7,25 @@ package PreSistem;
 
 public class KondisiRuang {
     
-private int Panjang;
-private int Lebar;
+private double Panjang;
+private double Lebar;
 private int jumlahkursi;
 private int jumlahpintu;
 private int jumlahjendela;
 
-    public int getPanjang() {
+    public double getPanjang() {
         return Panjang;
     }
 
-    public void setPanjang(int Panjang) {
+    public void setPanjang(double Panjang) {
         this.Panjang = Panjang;
     }
 
-    public int getLebar() {
+    public double getLebar() {
         return Lebar;
     }
 
-    public void setLebar(int Lebar) {
+    public void setLebar(double Lebar) {
         this.Lebar = Lebar;
     }
 

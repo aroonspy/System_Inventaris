@@ -6,8 +6,8 @@ package PreSistem;
 
 public class IdentitasRuangkelas {
     private String Namaruang;
-    private int Lokasiruang;
-    private int  Programstudi;
+    private String Lokasiruang;
+    private String  Programstudi;
 
     public String getNamaruang() {
         return Namaruang;
@@ -17,19 +17,20 @@ public class IdentitasRuangkelas {
         this.Namaruang = Namaruang;
     }
 
-    public int getLokasiruang() {
+    public String getLokasiruang() {
         return Lokasiruang;
     }
 
-    public void setLokasiruang(int Lokasiruang) {
+    public void setLokasiruang(String Lokasiruang) {
         this.Lokasiruang = Lokasiruang;
     }
 
-    public int getProgramstudi() {
+    public String getProgramstudi() {
         return Programstudi;
     }
 
-    public void setProgramstudi(int Programstudi) {
+    public void setProgramstudi(String Programstudi) {
         this.Programstudi = Programstudi;
     }
+
 }
