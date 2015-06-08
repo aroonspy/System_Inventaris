@@ -45,21 +45,21 @@ public class TampilanAwal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Jam = new javax.swing.JLabel();
         Exit = new javax.swing.JButton();
         Minimaze = new javax.swing.JButton();
         Logout = new javax.swing.JButton();
-        Profil = new javax.swing.JPanel();
-        User = new javax.swing.JLabel();
-        Pass = new javax.swing.JLabel();
-        OKButton = new javax.swing.JButton();
-        BackgroundProfil = new javax.swing.JLabel();
         Login = new javax.swing.JPanel();
         Username = new javax.swing.JTextField();
         Password = new javax.swing.JPasswordField();
         LoginButton = new javax.swing.JButton();
         CreatAkun = new javax.swing.JButton();
         BackgroundLogin = new javax.swing.JLabel();
-        Jam = new javax.swing.JLabel();
+        Profil = new javax.swing.JPanel();
+        User = new javax.swing.JLabel();
+        Pass = new javax.swing.JLabel();
+        OKButton = new javax.swing.JButton();
+        BackgroundProfil = new javax.swing.JLabel();
         SetAkun = new javax.swing.JPanel();
         SetUsername = new javax.swing.JTextField();
         SetPassword = new javax.swing.JPasswordField();
@@ -84,8 +84,14 @@ public class TampilanAwal extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Jam.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        Jam.setForeground(new java.awt.Color(0, 165, 255));
+        Jam.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(Jam, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 0, 220, 40));
+
         Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Exit.png"))); // NOI18N
         Exit.setContentAreaFilled(false);
+        Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExitActionPerformed(evt);
@@ -95,6 +101,7 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         Minimaze.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Minimize.png"))); // NOI18N
         Minimaze.setContentAreaFilled(false);
+        Minimaze.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Minimaze.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimazeActionPerformed(evt);
@@ -108,33 +115,14 @@ public class TampilanAwal extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LogoutMouseClicked(evt);
             }
-        });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 70, 50, 50));
-
-        Profil.setOpaque(false);
-        Profil.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        User.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
-        User.setForeground(new java.awt.Color(255, 255, 255));
-        Profil.add(User, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 87, 260, 60));
-
-        Pass.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
-        Pass.setForeground(new java.awt.Color(255, 255, 255));
-        Profil.add(Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 198, 260, 60));
-
-        OKButton.setText("OK");
-        OKButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OKButtonActionPerformed(evt);
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LogoutMouseExited(evt);
             }
         });
-        Profil.add(OKButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 100, 50));
-
-        BackgroundProfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/01Login.png"))); // NOI18N
-        BackgroundProfil.setToolTipText("");
-        Profil.add(BackgroundProfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 590));
-
-        getContentPane().add(Profil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1350, -1));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 70, 60, 60));
 
         Login.setMaximumSize(new java.awt.Dimension(1350, 720));
         Login.setMinimumSize(new java.awt.Dimension(1350, 720));
@@ -184,12 +172,32 @@ public class TampilanAwal extends javax.swing.JFrame {
         BackgroundLogin.setOpaque(true);
         Login.add(BackgroundLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1350, 591));
 
-        Jam.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        Jam.setForeground(new java.awt.Color(0, 165, 255));
-        Jam.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Login.add(Jam, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 0, 220, 40));
-
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 720));
+
+        Profil.setOpaque(false);
+        Profil.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        User.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
+        User.setForeground(new java.awt.Color(255, 255, 255));
+        Profil.add(User, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 87, 260, 60));
+
+        Pass.setFont(new java.awt.Font("Tahoma", 0, 26)); // NOI18N
+        Pass.setForeground(new java.awt.Color(255, 255, 255));
+        Profil.add(Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 198, 260, 60));
+
+        OKButton.setText("OK");
+        OKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OKButtonActionPerformed(evt);
+            }
+        });
+        Profil.add(OKButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 100, 50));
+
+        BackgroundProfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/01Login.png"))); // NOI18N
+        BackgroundProfil.setToolTipText("");
+        Profil.add(BackgroundProfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 590));
+
+        getContentPane().add(Profil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1350, -1));
 
         SetAkun.setMaximumSize(new java.awt.Dimension(1350, 720));
         SetAkun.setMinimumSize(new java.awt.Dimension(1350, 720));
@@ -237,7 +245,7 @@ public class TampilanAwal extends javax.swing.JFrame {
                 CreatAkunButtonActionPerformed(evt);
             }
         });
-        SetAkun.add(CreatAkunButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 580, -1, -1));
+        SetAkun.add(CreatAkunButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(597, 553, 120, 50));
 
         BackgroundCreatAkun.setBackground(new java.awt.Color(255, 255, 255));
         BackgroundCreatAkun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/0CreatAkun.png"))); // NOI18N
@@ -250,10 +258,19 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         Tanggal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/IconTanggal1.png"))); // NOI18N
         Tanggal.setContentAreaFilled(false);
+        Tanggal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Tanggal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Tanggal.setMaximumSize(new java.awt.Dimension(205, 181));
         Tanggal.setMinimumSize(new java.awt.Dimension(205, 181));
         Tanggal.setPreferredSize(new java.awt.Dimension(205, 181));
+        Tanggal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TanggalMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TanggalMouseExited(evt);
+            }
+        });
         Tanggal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TanggalActionPerformed(evt);
@@ -263,6 +280,15 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         InputData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/InputData.png"))); // NOI18N
         InputData.setContentAreaFilled(false);
+        InputData.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        InputData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                InputDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                InputDataMouseExited(evt);
+            }
+        });
         InputData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InputDataActionPerformed(evt);
@@ -272,7 +298,16 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         LihatData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/LihatData.png"))); // NOI18N
         LihatData.setContentAreaFilled(false);
+        LihatData.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LihatData.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LihatData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LihatDataMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LihatDataMouseExited(evt);
+            }
+        });
         LihatData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LihatDataActionPerformed(evt);
@@ -282,7 +317,16 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         Akun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Akun.png"))); // NOI18N
         Akun.setContentAreaFilled(false);
+        Akun.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Akun.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Akun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AkunMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AkunMouseExited(evt);
+            }
+        });
         Akun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AkunActionPerformed(evt);
@@ -354,7 +398,7 @@ public class TampilanAwal extends javax.swing.JFrame {
     boolean AkunLogin = false;
     
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        if(Username.getText() != "" || Password.getText() != ""){
+        if(Username.getText() != "" ||Username.getText() != null  ||Password.getText() != null||Password.getText() != ""){
           login.SetLogin(Username.getText(), Password.getText());
             if(login.Next == true){
                 Login.setVisible(false);
@@ -427,6 +471,46 @@ public class TampilanAwal extends javax.swing.JFrame {
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
+
+    private void LogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseEntered
+        Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/LogOut2.png")));
+    }//GEN-LAST:event_LogoutMouseEntered
+
+    private void LogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseExited
+         Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/LogOut.png")));
+    }//GEN-LAST:event_LogoutMouseExited
+
+    private void TanggalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TanggalMouseEntered
+        Tanggal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/IconTanggal2.png")));
+    }//GEN-LAST:event_TanggalMouseEntered
+
+    private void TanggalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TanggalMouseExited
+        Tanggal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/IconTanggal1.png")));
+    }//GEN-LAST:event_TanggalMouseExited
+
+    private void InputDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputDataMouseEntered
+        InputData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/InputData2.png"))); // NOI18N
+    }//GEN-LAST:event_InputDataMouseEntered
+
+    private void InputDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputDataMouseExited
+        InputData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/InputData.png"))); // NOI18N
+    }//GEN-LAST:event_InputDataMouseExited
+
+    private void LihatDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LihatDataMouseEntered
+        LihatData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/LihatData2.png"))); // NOI18N
+    }//GEN-LAST:event_LihatDataMouseEntered
+
+    private void LihatDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LihatDataMouseExited
+        LihatData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/LihatData.png"))); // NOI18N
+    }//GEN-LAST:event_LihatDataMouseExited
+
+    private void AkunMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AkunMouseEntered
+        Akun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Akun2.png"))); // NOI18N
+    }//GEN-LAST:event_AkunMouseEntered
+
+    private void AkunMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AkunMouseExited
+        Akun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Akun.png"))); // NOI18N
+    }//GEN-LAST:event_AkunMouseExited
          
     public static void main(String[] args) {
         /* Set the Nimbus look and feel */

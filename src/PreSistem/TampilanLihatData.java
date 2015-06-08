@@ -447,6 +447,8 @@ public class TampilanLihatData extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_HomeActionPerformed
 
+    
+    
     public void Data() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
