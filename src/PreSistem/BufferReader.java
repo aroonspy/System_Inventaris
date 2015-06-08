@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
  
 public class BufferReader {
-    public static void main(String[] args) {
+    public void Reader() {
         String lokasi_file = "ID.txt";
         
         try {

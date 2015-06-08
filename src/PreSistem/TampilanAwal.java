@@ -111,6 +111,7 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/LogOut.png"))); // NOI18N
         Logout.setContentAreaFilled(false);
+        Logout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LogoutMouseClicked(evt);
@@ -363,9 +364,16 @@ public class TampilanAwal extends javax.swing.JFrame {
 
         TombolMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TombolMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Rounded Rectangle 1.png"))); // NOI18N
+        TombolMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TombolMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TombolMenuMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TombolMenuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TombolMenuMouseExited(evt);
             }
         });
         getContentPane().add(TombolMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(655, 640, 50, 40));
@@ -511,6 +519,14 @@ public class TampilanAwal extends javax.swing.JFrame {
     private void AkunMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AkunMouseExited
         Akun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Akun.png"))); // NOI18N
     }//GEN-LAST:event_AkunMouseExited
+
+    private void TombolMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TombolMenuMouseEntered
+        TombolMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Rounded Rectangle 2.png"))); // NOI18N
+    }//GEN-LAST:event_TombolMenuMouseEntered
+
+    private void TombolMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TombolMenuMouseExited
+        TombolMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PreSistem/Images/Rounded Rectangle 1.png"))); // NOI18N
+    }//GEN-LAST:event_TombolMenuMouseExited
          
     public static void main(String[] args) {
         /* Set the Nimbus look and feel */
