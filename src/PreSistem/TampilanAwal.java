@@ -439,23 +439,27 @@ public class TampilanAwal extends javax.swing.JFrame {
         Kalender.Kalender();
         Menu.setVisible(false);
         TombolMenu.setVisible(true);
+        menu = true;
     }//GEN-LAST:event_TanggalActionPerformed
 
     private void InputDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputDataActionPerformed
         TID.Input();
         Menu.setVisible(false);
         TombolMenu.setVisible(true);
+        menu = true;
     }//GEN-LAST:event_InputDataActionPerformed
 
     private void LihatDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LihatDataActionPerformed
         LData.Data();
         Menu.setVisible(false);
         TombolMenu.setVisible(true);
+        menu = true;
     }//GEN-LAST:event_LihatDataActionPerformed
 
     private void AkunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AkunActionPerformed
         Profil.setVisible(true);
         Menu.setVisible(false);
+        menu = true;
     }//GEN-LAST:event_AkunActionPerformed
 
     private void OKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKButtonActionPerformed

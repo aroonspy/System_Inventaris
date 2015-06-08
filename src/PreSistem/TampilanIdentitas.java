@@ -283,6 +283,8 @@ public class TampilanIdentitas extends javax.swing.JFrame {
     }//GEN-LAST:event_SaveActionPerformed
 
     private void EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditActionPerformed
+        DefaultTableModel modelID = (DefaultTableModel) TableIdentitas.getModel();
+            modelID.removeRow(0);
         Identitas.setVisible(true);
         Tabel.setVisible(false);
         TombolIdentitas.setVisible(false);
